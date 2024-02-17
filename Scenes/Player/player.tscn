@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs7u4vh0a6sqg"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_2h4k3"]
+[ext_resource type="Script" path="res://addons/addons/ultimate_character/ucharacterbody3d.gd" id="1_fmlr3"]
+[ext_resource type="Script" path="res://Scenes/Player/Equipment_Machine.gd" id="2_5slag"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pxwdu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5io2p"]
+height = 1.3
+
+[node name="Player" type="Node"]
+script = ExtResource("1_2h4k3")
+
+[node name="UCharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_fmlr3")
+
+[node name="CollisionShapeNormal" type="CollisionShape3D" parent="UCharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_pxwdu")
+
+[node name="CollisionShapeCrouch" type="CollisionShape3D" parent="UCharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+shape = SubResource("CapsuleShape3D_5io2p")
+disabled = true
+
+[node name="Head" type="Node3D" parent="UCharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="Camera" type="Camera3D" parent="UCharacterBody3D/Head"]
+
+[node name="AudioListener3D" type="AudioListener3D" parent="UCharacterBody3D/Head"]
+
+[node name="RayCast3D" type="RayCast3D" parent="UCharacterBody3D"]
+target_position = Vector3(0, 2, 0)
+
+[node name="Conditions_Machine" type="Node" parent="."]
+
+[node name="Burning" type="Node" parent="Conditions_Machine"]
+
+[node name="Wet" type="Node" parent="Conditions_Machine"]
+
+[node name="Deafened" type="Node" parent="Conditions_Machine"]
+
+[node name="Status_Machine" type="Node" parent="."]
+
+[node name="Idle" type="Node" parent="Status_Machine"]
+
+[node name="Walking" type="Node" parent="Status_Machine"]
+
+[node name="Running" type="Node" parent="Status_Machine"]
+
+[node name="Jumping" type="Node" parent="Status_Machine"]
+
+[node name="Falling" type="Node" parent="Status_Machine"]
+
+[node name="Using_Equipment" type="Node" parent="Status_Machine"]
+
+[node name="Equipment_Machine" type="Node" parent="."]
+script = ExtResource("2_5slag")
+
+[node name="Muppet1" type="Node" parent="Equipment_Machine"]
+
+[node name="Muppet2" type="Node" parent="Equipment_Machine"]
+
+[node name="Muppet3" type="Node" parent="Equipment_Machine"]

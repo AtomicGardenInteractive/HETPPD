@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cnb7c0u218w7y"]
 
-[ext_resource type="PackedScene" uid="uid://cmo42jtxgnew6" path="res://level.tscn" id="1_k2jau"]
-[ext_resource type="PackedScene" uid="uid://bs7u4vh0a6sqg" path="res://player.tscn" id="2_0sp0r"]
+[ext_resource type="PackedScene" uid="uid://cmo42jtxgnew6" path="res://Scenes/Levels/level.tscn" id="1_fmyhb"]
+[ext_resource type="PackedScene" uid="uid://bs7u4vh0a6sqg" path="res://Scenes/Player/player.tscn" id="2_ia1on"]
 
 [node name="Menu_Handler" type="Node"]
 
@@ -9,10 +9,9 @@
 
 [node name="Level_Handler" type="Node" parent="Game_Handler"]
 
-[node name="Level" parent="Game_Handler/Level_Handler" instance=ExtResource("1_k2jau")]
+[node name="Level" parent="Game_Handler/Level_Handler" instance=ExtResource("1_fmyhb")]
 
-[node name="Player" parent="Game_Handler" instance=ExtResource("2_0sp0r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.600704, 0)
+[node name="Player" parent="Game_Handler" instance=ExtResource("2_ia1on")]
 
 [node name="Pause_Menu" type="CanvasLayer" parent="."]
 

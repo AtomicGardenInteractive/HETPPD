@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmo42jtxgnew6"]
+
+[ext_resource type="Texture2D" uid="uid://d4jf1173utwqv" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="1_wtg7c"]
+[ext_resource type="PackedScene" uid="uid://tmpbtn45dnna" path="res://Scenes/Objects/crate_test.tscn" id="2_8r4x3"]
+
+[sub_resource type="Environment" id="Environment_tbaoa"]
+ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
+volumetric_fog_enabled = true
+volumetric_fog_length = 3.17
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ugc1"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ygm8i"]
+albedo_texture = ExtResource("1_wtg7c")
+uv1_scale = Vector3(100, 100, 100)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tsxwx"]
+material = SubResource("StandardMaterial3D_ygm8i")
+size = Vector2(100, 100)
+
+[node name="Level" type="Node3D"]
+
+[node name="World" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_tbaoa")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(0.79149, -0.354872, 0.497604, 0, 0.814166, 0.580632, -0.611182, -0.459565, 0.644404, 0, 0, 0)
+
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("BoxShape3D_3ugc1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("PlaneMesh_tsxwx")
+skeleton = NodePath("../..")
+metadata/_edit_lock_ = true
+
+[node name="Scatter" type="Node" parent="."]
+
+[node name="Crate_Test" parent="Scatter" instance=ExtResource("2_8r4x3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.970751, 9.17349, -6)
+
+[node name="Crate_Test2" parent="Scatter" instance=ExtResource("2_8r4x3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59413, 1.35555, 0)
+
+[node name="Crate_Test3" parent="Scatter" instance=ExtResource("2_8r4x3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.73342, 1.35555, 0)
+
+[node name="Crate_Test4" parent="Scatter" instance=ExtResource("2_8r4x3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.57281, 1.35555, -5.28972)
