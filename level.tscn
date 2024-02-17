@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmo42jtxgnew6"]
+
+[ext_resource type="Texture2D" uid="uid://d4jf1173utwqv" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="1_wtg7c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ugc1"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ygm8i"]
+albedo_texture = ExtResource("1_wtg7c")
+uv1_scale = Vector3(100, 100, 100)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tsxwx"]
+material = SubResource("StandardMaterial3D_ygm8i")
+size = Vector2(100, 100)
+
+[sub_resource type="Environment" id="Environment_tbaoa"]
+ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
+volumetric_fog_enabled = true
+
+[node name="Level" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.79149, -0.354872, 0.497604, 0, 0.814166, 0.580632, -0.611182, -0.459565, 0.644405, 0, 0, 0)
+
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("BoxShape3D_3ugc1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("PlaneMesh_tsxwx")
+skeleton = NodePath("../..")
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tbaoa")

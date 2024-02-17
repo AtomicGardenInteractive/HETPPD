@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs7u4vh0a6sqg"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_r8t7t"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ch73h"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_r8t7t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_ch73h")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425187, 0)
+current = true
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Camera3D"]
+
+[node name="Conditions_Machine" type="Node" parent="."]
+
+[node name="Burning" type="Node" parent="Conditions_Machine"]
+
+[node name="Wet" type="Node" parent="Conditions_Machine"]
+
+[node name="Deafened" type="Node" parent="Conditions_Machine"]
+
+[node name="Status_Machine" type="Node" parent="."]
+
+[node name="Idle" type="Node" parent="Status_Machine"]
+
+[node name="Walking" type="Node" parent="Status_Machine"]
+
+[node name="Running" type="Node" parent="Status_Machine"]
+
+[node name="Jumping" type="Node" parent="Status_Machine"]
+
+[node name="Falling" type="Node" parent="Status_Machine"]
+
+[node name="Using_Equipment" type="Node" parent="Status_Machine"]
+
+[node name="Equipment_Machine" type="Node" parent="."]
+
+[node name="Muppet1" type="Node" parent="Equipment_Machine"]
+
+[node name="Muppet2" type="Node" parent="Equipment_Machine"]
+
+[node name="Muppet3" type="Node" parent="Equipment_Machine"]
