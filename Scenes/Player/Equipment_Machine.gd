@@ -12,7 +12,7 @@ func _ready():
 	for child in get_children():
 		if child is EquipmentState:
 			equipmentstates[child.name.to_lower()] = child
-			child.Transitioned.connect(on_child_transition)
+			child.EquipmentTransitioned.connect(on_child_equipment_transition)
 			child.parent = parent
 	
 	if initial_equipmentstate:
@@ -27,7 +27,7 @@ func _physics_process(delta):
 	if current_equipmentstate:
 		current_equipmentstate.Physics_Update(delta)
 
-func on_child_transition(equipmentstate, new_state_name):
+func on_child_equipment_transition(equipmentstate, new_state_name):
 	if equipmentstate != current_equipmentstate:
 		return
 	var new_equipmentstate = equipmentstates.get(new_state_name.to_lower())

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmo42jtxgnew6"]
+[gd_scene load_steps=8 format=3 uid="uid://cmo42jtxgnew6"]
 
 [ext_resource type="Texture2D" uid="uid://d4jf1173utwqv" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="1_wtg7c"]
 [ext_resource type="PackedScene" uid="uid://tmpbtn45dnna" path="res://Scenes/Objects/crate_test.tscn" id="2_8r4x3"]
+[ext_resource type="PackedScene" uid="uid://bu458s3sjx8rr" path="res://Scenes/Objects/Wall_test.tscn" id="3_tmitb"]
 
 [sub_resource type="Environment" id="Environment_tbaoa"]
 ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
@@ -18,6 +19,7 @@ uv1_scale = Vector3(100, 100, 100)
 [sub_resource type="PlaneMesh" id="PlaneMesh_tsxwx"]
 material = SubResource("StandardMaterial3D_ygm8i")
 size = Vector2(100, 100)
+center_offset = Vector3(0, 0.5, 0)
 
 [node name="Level" type="Node3D"]
 
@@ -36,10 +38,9 @@ transform = Transform3D(0.79149, -0.354872, 0.497604, 0, 0.814166, 0.580632, -0.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
 shape = SubResource("BoxShape3D_3ugc1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/StaticBody3D"]
 mesh = SubResource("PlaneMesh_tsxwx")
-skeleton = NodePath("../..")
-metadata/_edit_lock_ = true
+skeleton = NodePath("../../..")
 
 [node name="Scatter" type="Node" parent="."]
 
@@ -54,3 +55,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.73342, 1.35555, 0)
 
 [node name="Crate_Test4" parent="Scatter" instance=ExtResource("2_8r4x3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.57281, 1.35555, -5.28972)
+
+[node name="Node3D" parent="Scatter" instance=ExtResource("3_tmitb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58959, -9.43295)
