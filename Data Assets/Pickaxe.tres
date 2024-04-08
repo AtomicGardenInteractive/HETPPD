@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Equipment_Data" load_steps=2 format=3 uid="uid://biw01tx0usiea"]
+
+[ext_resource type="Script" path="res://Data Assets/equipment_data.gd" id="1_p1mbq"]
+
+[resource]
+script = ExtResource("1_p1mbq")
+name = "Margeret Thatcher"

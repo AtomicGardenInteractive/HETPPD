@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddj4mmewjgttc"]
+
+[ext_resource type="Script" path="res://Scenes/Componets/Equipment/equip_comp.gd" id="1_lt0l0"]
+
+[node name="Equip_Comp" type="Node3D"]
+script = ExtResource("1_lt0l0")
+
+[node name="Visuals" type="Node" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Visuals"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Visuals"]
+
+[node name="AnimationTree" type="AnimationTree" parent="Visuals/AnimationPlayer"]
+root_node = NodePath("../..")
+anim_player = NodePath("..")
+
+[node name="Audio Player" type="Node" parent="."]
+
+[node name="Sounds" type="Node" parent="Audio Player"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio Player/Sounds"]
+
+[node name="States" type="Node" parent="."]
+
+[node name="Empty_State" type="Node" parent="States"]
+
+[node name="Pickaxe_State" type="Node" parent="States"]
+
+[node name="EquipTwo_State" type="Node" parent="States"]
