@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://w7tr5ylibrku"]
+
+[ext_resource type="Script" path="res://addons/addons/ultimate_character/ucharacterbody3d.gd" id="1_g0rj6"]
+[ext_resource type="Script" path="res://Scenes/Componets/Character Body/Mantle.gd" id="2_72p7t"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pxwdu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5io2p"]
+height = 1.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j06oy"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sb4nr"]
+material = SubResource("StandardMaterial3D_j06oy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lech4"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4fl4d"]
+material = SubResource("StandardMaterial3D_lech4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mb4i6"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pxsxp"]
+material = SubResource("StandardMaterial3D_mb4i6")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yuvhv"]
+
+[node name="UCharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_g0rj6")
+
+[node name="CollisionShapeNormal" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_pxwdu")
+
+[node name="CollisionShapeCrouch" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+shape = SubResource("CapsuleShape3D_5io2p")
+disabled = true
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+visible = false
+
+[node name="Camera" type="Camera3D" parent="Head"]
+visible = false
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Head"]
+visible = false
+
+[node name="Equipment" type="Node3D" parent="Head"]
+visible = false
+
+[node name="EquipmentMeshA" type="MeshInstance3D" parent="Head/Equipment"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.544212, -0.351969, -0.610191)
+visible = false
+mesh = SubResource("CapsuleMesh_sb4nr")
+
+[node name="EquipmentMeshB" type="MeshInstance3D" parent="Head/Equipment"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.544212, -0.351969, -0.610191)
+visible = false
+mesh = SubResource("CapsuleMesh_4fl4d")
+
+[node name="EquipmentMeshC" type="MeshInstance3D" parent="Head/Equipment"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.544212, -0.351969, -0.610191)
+visible = false
+mesh = SubResource("CapsuleMesh_pxsxp")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+visible = false
+target_position = Vector3(0, 2, 0)
+
+[node name="Mantle" type="Node" parent="."]
+script = ExtResource("2_72p7t")
+
+[node name="StepDetectionRay" type="RayCast3D" parent="Mantle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+target_position = Vector3(0, 0, -1)
+
+[node name="WallDetectionRay" type="RayCast3D" parent="Mantle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+target_position = Vector3(0, 0, -1)
+
+[node name="DownRay" type="RayCast3D" parent="Mantle"]
+target_position = Vector3(0, -10, 0)
+
+[node name="TargetPos" type="Area3D" parent="Mantle"]
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mantle/TargetPos"]
+shape = SubResource("CapsuleShape3D_yuvhv")
