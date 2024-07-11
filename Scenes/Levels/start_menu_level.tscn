@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdh6u6wmw0les"]
+
+[ext_resource type="PackedScene" uid="uid://cvr0bh7w38e8l" path="res://Assets/yc-130prototype_of_c-130/scene.gltf" id="1_f2he3"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qbkep"]
+
+[node name="StartMenuLevel" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.996021, 0, -0.0891203, 0, 1, 0, 0.0891203, 0, 0.996021, 1.23594, 1.96344, 6.05071)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06274, 1.7107, 3.18044)
+mesh = SubResource("CapsuleMesh_qbkep")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_f2he3")]

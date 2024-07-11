@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cblg82p1yos3t"]
+
+[node name="DialogUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true

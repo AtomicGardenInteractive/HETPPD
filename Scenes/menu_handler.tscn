@@ -1,26 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnb7c0u218w7y"]
+[gd_scene load_steps=8 format=3 uid="uid://cnb7c0u218w7y"]
 
 [ext_resource type="PackedScene" uid="uid://cmo42jtxgnew6" path="res://Scenes/Levels/level.tscn" id="1_fmyhb"]
+[ext_resource type="Script" path="res://Scenes/game_handler.gd" id="1_lt1um"]
 [ext_resource type="PackedScene" uid="uid://bs7u4vh0a6sqg" path="res://Scenes/Player/player.tscn" id="2_ia1on"]
+[ext_resource type="PackedScene" uid="uid://cdh6u6wmw0les" path="res://Scenes/Levels/start_menu_level.tscn" id="4_hmv8y"]
+[ext_resource type="PackedScene" uid="uid://cblg82p1yos3t" path="res://Scenes/Interface/dialog_ui.tscn" id="4_iwrb8"]
+[ext_resource type="PackedScene" uid="uid://bcgu41slvgc0r" path="res://Scenes/Interface/pause_menu_ui.tscn" id="5_hsnhy"]
+[ext_resource type="PackedScene" uid="uid://dt3li5wje0wph" path="res://Scenes/Interface/options_menu_ui.tscn" id="7_0kkeh"]
 
-[node name="Menu_Handler" type="Node"]
+[node name="Game_Handler" type="Node" node_paths=PackedStringArray("pause_menu", "options_menu", "HUD")]
+process_mode = 3
+script = ExtResource("1_lt1um")
+pause_menu = NodePath("Interface/PauseMenuLayer/PauseMenuUI")
+options_menu = NodePath("Interface/OptionsMenuLayer/OptionsMenuUI")
+HUD = NodePath("Interface/UILayer/DialogUI")
 
-[node name="Game_Handler" type="Node" parent="."]
+[node name="Level_Handler" type="Node" parent="."]
+process_mode = 1
 
-[node name="Level_Handler" type="Node" parent="Game_Handler"]
+[node name="Level" parent="Level_Handler" instance=ExtResource("1_fmyhb")]
 
-[node name="Level" parent="Game_Handler/Level_Handler" instance=ExtResource("1_fmyhb")]
+[node name="Player" parent="Level_Handler" instance=ExtResource("2_ia1on")]
 
-[node name="Player" parent="Game_Handler" instance=ExtResource("2_ia1on")]
+[node name="StartMenuLevel" parent="Level_Handler" instance=ExtResource("4_hmv8y")]
 
-[node name="Pause_Menu" type="CanvasLayer" parent="."]
+[node name="Interface" type="Node" parent="."]
 
-[node name="Control" type="Control" parent="Pause_Menu"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="UILayer" type="CanvasLayer" parent="Interface"]
+
+[node name="DialogUI" parent="Interface/UILayer" instance=ExtResource("4_iwrb8")]
+
+[node name="PauseMenuLayer" type="CanvasLayer" parent="Interface"]
+
+[node name="PauseMenuUI" parent="Interface/PauseMenuLayer" node_paths=PackedStringArray("game_handler", "options_menu") instance=ExtResource("5_hsnhy")]
+game_handler = NodePath("../../..")
+options_menu = NodePath("../../OptionsMenuLayer")
+
+[node name="OptionsMenuLayer" type="CanvasLayer" parent="Interface"]
+
+[node name="OptionsMenuUI" parent="Interface/OptionsMenuLayer" node_paths=PackedStringArray("game_handler") instance=ExtResource("7_0kkeh")]
+game_handler = NodePath("../../..")
