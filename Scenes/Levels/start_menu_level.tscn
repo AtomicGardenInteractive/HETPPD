@@ -1,10 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdh6u6wmw0les"]
+[gd_scene load_steps=10 format=3 uid="uid://cdh6u6wmw0les"]
 
-[ext_resource type="PackedScene" uid="uid://cvr0bh7w38e8l" path="res://Assets/yc-130prototype_of_c-130/scene.gltf" id="1_f2he3"]
+[ext_resource type="Script" path="res://Scenes/Levels/start_menu_level.gd" id="1_mf6wx"]
+[ext_resource type="PackedScene" uid="uid://dja7a8xd0hgck" path="res://Scenes/Interface/main_menu_ui.tscn" id="2_n7pll"]
+[ext_resource type="PackedScene" uid="uid://cu5jdvoti0265" path="res://sketchfab_scene.tscn" id="2_x0pco"]
+[ext_resource type="PackedScene" uid="uid://d1cwyogxoaxfe" path="res://Scenes/Interface/radio.tscn" id="3_567d0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qbkep"]
 
+[sub_resource type="Environment" id="Environment_hc3kw"]
+ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
+volumetric_fog_enabled = true
+volumetric_fog_length = 3.17
+
+[sub_resource type="Animation" id="Animation_m1b0e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_u5v4k"]
+resource_name = "Start Game"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.23594, 1.96344, 6.05071)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v2y1o"]
+_data = {
+"RESET": SubResource("Animation_m1b0e"),
+"Start Game": SubResource("Animation_u5v4k")
+}
+
 [node name="StartMenuLevel" type="Node3D"]
+script = ExtResource("1_mf6wx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.996021, 0, -0.0891203, 0, 1, 0, 0.0891203, 0, 0.996021, 1.23594, 1.96344, 6.05071)
@@ -13,4 +58,28 @@ transform = Transform3D(0.996021, 0, -0.0891203, 0, 1, 0, 0.0891203, 0, 0.996021
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06274, 1.7107, 3.18044)
 mesh = SubResource("CapsuleMesh_qbkep")
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_f2he3")]
+[node name="Plane" parent="." instance=ExtResource("2_x0pco")]
+
+[node name="World" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_hc3kw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(0.79149, -0.354872, 0.497604, 0, 0.814166, 0.580632, -0.611182, -0.459565, 0.644404, 0, 0, 0)
+
+[node name="MenuUILayer" type="CanvasLayer" parent="."]
+
+[node name="Main_Menu_UI" parent="MenuUILayer" node_paths=PackedStringArray("mainmenuscene") instance=ExtResource("2_n7pll")]
+mainmenuscene = NodePath("../..")
+
+[node name="RadioLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Radio" parent="RadioLayer" instance=ExtResource("3_567d0")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Camera3D")
+libraries = {
+"": SubResource("AnimationLibrary_v2y1o")
+}

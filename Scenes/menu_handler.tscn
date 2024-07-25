@@ -15,15 +15,6 @@ pause_menu = NodePath("Interface/PauseMenuLayer/PauseMenuUI")
 options_menu = NodePath("Interface/OptionsMenuLayer/OptionsMenuUI")
 HUD = NodePath("Interface/UILayer/DialogUI")
 
-[node name="Level_Handler" type="Node" parent="."]
-process_mode = 1
-
-[node name="Level" parent="Level_Handler" instance=ExtResource("1_fmyhb")]
-
-[node name="Player" parent="Level_Handler" instance=ExtResource("2_ia1on")]
-
-[node name="StartMenuLevel" parent="Level_Handler" instance=ExtResource("4_hmv8y")]
-
 [node name="Interface" type="Node" parent="."]
 
 [node name="UILayer" type="CanvasLayer" parent="Interface"]
@@ -40,3 +31,12 @@ options_menu = NodePath("../../OptionsMenuLayer")
 
 [node name="OptionsMenuUI" parent="Interface/OptionsMenuLayer" node_paths=PackedStringArray("game_handler") instance=ExtResource("7_0kkeh")]
 game_handler = NodePath("../../..")
+
+[node name="Level_Handler" type="Node" parent="."]
+process_mode = 1
+
+[node name="Level" parent="Level_Handler" instance=ExtResource("1_fmyhb")]
+
+[node name="Player" parent="Level_Handler" instance=ExtResource("2_ia1on")]
+
+[node name="StartMenuLevel" parent="Level_Handler" instance=ExtResource("4_hmv8y")]
