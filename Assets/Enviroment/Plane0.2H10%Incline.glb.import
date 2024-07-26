@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dppdafeu5uamq"
-path="res://.godot/imported/Plane0.2H10_Incline.glb-3c339c53207309e1b1bb951613a065b1.scn"
+uid="uid://cjyoscgyrgafs"
+path="res://.godot/imported/Plane0.2H10%Incline.glb-2125bf8aee31d89699fddedb57155bde.scn"
 
 [deps]
 
-source_file="res://Assets/Enviroment/Plane0.2H10_Incline.glb"
-dest_files=["res://.godot/imported/Plane0.2H10_Incline.glb-3c339c53207309e1b1bb951613a065b1.scn"]
+source_file="res://Assets/Enviroment/Plane0.2H10%Incline.glb"
+dest_files=["res://.godot/imported/Plane0.2H10%Incline.glb-2125bf8aee31d89699fddedb57155bde.scn"]
 
 [params]
 
