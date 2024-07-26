@@ -14,18 +14,6 @@ volumetric_fog_length = 3.17
 
 [sub_resource type="Animation" id="Animation_m1b0e"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
 
 [sub_resource type="Animation" id="Animation_u5v4k"]
 resource_name = "Start Game"
@@ -52,7 +40,7 @@ _data = {
 script = ExtResource("1_mf6wx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.996021, 0, -0.0891203, 0, 1, 0, 0.0891203, 0, 0.996021, 1.23594, 1.96344, 6.05071)
+transform = Transform3D(0.996021, 0, -0.0891203, 0, 1, 0, 0.0891203, 0, 0.996021, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06274, 1.7107, 3.18044)

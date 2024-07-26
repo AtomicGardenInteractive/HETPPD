@@ -1,3 +1,38 @@
-[gd_scene format=3 uid="uid://3ikss5hb1chi"]
+[gd_scene load_steps=7 format=3 uid="uid://3ikss5hb1chi"]
+
+[ext_resource type="PackedScene" uid="uid://by4vmih6m7p6h" path="res://Assets/Enviroment/Plane0.2HFlat.glb" id="1_6t3t4"]
+[ext_resource type="PackedScene" uid="uid://cln85h8fleq5o" path="res://Assets/Enviroment/Plane0.2H20_Incline.glb" id="2_nw4b4"]
+[ext_resource type="PackedScene" uid="uid://7lyyqkemcs0d" path="res://Assets/Enviroment/Plane0.2H20_Decline.glb" id="3_8nsek"]
+[ext_resource type="PackedScene" uid="uid://dppdafeu5uamq" path="res://Assets/Enviroment/Plane0.2H10_Incline.glb" id="4_exo4k"]
+[ext_resource type="PackedScene" uid="uid://imdu70r0mqqx" path="res://Assets/Enviroment/Plane0.2H10_Decline.glb" id="5_h72im"]
+
+[sub_resource type="Environment" id="Environment_q64fx"]
+ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
+volumetric_fog_enabled = true
+volumetric_fog_length = 3.17
 
 [node name="main_level" type="Node3D"]
+
+[node name="World" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_q64fx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(0.79149, -0.354872, 0.497604, 0, 0.814166, 0.580632, -0.611182, -0.459565, 0.644404, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Plane0_2HFlat2" parent="." instance=ExtResource("1_6t3t4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04027, 0, -2.42164)
+
+[node name="Plane0_2H20_Incline2" parent="." instance=ExtResource("2_nw4b4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20429, -0.984166, 6.3599)
+
+[node name="Plane0_2H20_Decline2" parent="." instance=ExtResource("3_8nsek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2259, 0, -1.43337)
+
+[node name="Plane0_2H10_Incline2" parent="." instance=ExtResource("4_exo4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6634, 0, -3.42759)
+
+[node name="Plane0_2H10_Decline2" parent="." instance=ExtResource("5_h72im")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6151, 0, 0.941251)
