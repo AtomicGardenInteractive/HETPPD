@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://5pj75r7d4fer"
-path="res://.godot/imported/Plane0.2HFlat.glb-029d9533dabf079e13bb36b0ae484c91.scn"
+uid="uid://dci5hi8dtxea5"
+path="res://.godot/imported/Plane0.2H10%Decline.glb-bcbe2285348b1ef592392aed137258f9.scn"
 
 [deps]
 
-source_file="res://Assets/Enviroment/Plane0.2HFlat.glb"
-dest_files=["res://.godot/imported/Plane0.2HFlat.glb-029d9533dabf079e13bb36b0ae484c91.scn"]
+source_file="res://Assets/Enviroment/Ground/Plane0.2H10%Decline.glb"
+dest_files=["res://.godot/imported/Plane0.2H10%Decline.glb-bcbe2285348b1ef592392aed137258f9.scn"]
 
 [params]
 

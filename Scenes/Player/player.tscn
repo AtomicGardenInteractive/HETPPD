@@ -1,10 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bs7u4vh0a6sqg"]
+[gd_scene load_steps=11 format=3 uid="uid://bs7u4vh0a6sqg"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_2h4k3"]
 [ext_resource type="Script" path="res://addons/addons/ultimate_character/ucharacterbody3d.gd" id="1_fmlr3"]
-[ext_resource type="Script" path="res://Scenes/Player/Equipment_Machine.gd" id="2_5slag"]
-[ext_resource type="Script" path="res://Scenes/Player/Muppet1test.gd" id="4_0gqwn"]
-[ext_resource type="Script" path="res://Scenes/Player/Muppet2test.gd" id="5_mknb3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pxwdu"]
 
@@ -29,80 +26,41 @@ albedo_color = Color(1, 1, 0, 1)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_pxsxp"]
 material = SubResource("StandardMaterial3D_mb4i6")
 
-[node name="Player" type="Node"]
-script = ExtResource("1_2h4k3")
-
-[node name="UCharacterBody3D" type="CharacterBody3D" parent="."]
+[node name="UCharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_fmlr3")
 
-[node name="CollisionShapeNormal" type="CollisionShape3D" parent="UCharacterBody3D"]
+[node name="CollisionShapeNormal" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_pxwdu")
 
-[node name="CollisionShapeCrouch" type="CollisionShape3D" parent="UCharacterBody3D"]
+[node name="CollisionShapeCrouch" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
 shape = SubResource("CapsuleShape3D_5io2p")
 disabled = true
 
-[node name="Head" type="Node3D" parent="UCharacterBody3D"]
+[node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 
-[node name="Camera" type="Camera3D" parent="UCharacterBody3D/Head"]
+[node name="Camera" type="Camera3D" parent="Head"]
 
-[node name="AudioListener3D" type="AudioListener3D" parent="UCharacterBody3D/Head"]
+[node name="AudioListener3D" type="AudioListener3D" parent="Head"]
 
-[node name="Equipment" type="Node3D" parent="UCharacterBody3D/Head"]
+[node name="Equipment" type="Node3D" parent="Head"]
 
-[node name="EquipmentMeshA" type="MeshInstance3D" parent="UCharacterBody3D/Head/Equipment"]
+[node name="EquipmentMeshA" type="MeshInstance3D" parent="Head/Equipment"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.544212, -0.351969, -0.610191)
 mesh = SubResource("CapsuleMesh_sb4nr")
 
-[node name="EquipmentMeshB" type="MeshInstance3D" parent="UCharacterBody3D/Head/Equipment"]
+[node name="EquipmentMeshB" type="MeshInstance3D" parent="Head/Equipment"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.544212, -0.351969, -0.610191)
 mesh = SubResource("CapsuleMesh_4fl4d")
 
-[node name="EquipmentMeshC" type="MeshInstance3D" parent="UCharacterBody3D/Head/Equipment"]
+[node name="EquipmentMeshC" type="MeshInstance3D" parent="Head/Equipment"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.544212, -0.351969, -0.610191)
 mesh = SubResource("CapsuleMesh_pxsxp")
 
-[node name="RayCast3D" type="RayCast3D" parent="UCharacterBody3D"]
+[node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 2, 0)
 
-[node name="Conditions_Machine" type="Node" parent="."]
-
-[node name="Burning" type="Node" parent="Conditions_Machine"]
-
-[node name="Wet" type="Node" parent="Conditions_Machine"]
-
-[node name="Deafened" type="Node" parent="Conditions_Machine"]
-
-[node name="Status_Machine" type="Node" parent="."]
-
-[node name="Idle" type="Node" parent="Status_Machine"]
-
-[node name="Walking" type="Node" parent="Status_Machine"]
-
-[node name="Running" type="Node" parent="Status_Machine"]
-
-[node name="Jumping" type="Node" parent="Status_Machine"]
-
-[node name="Falling" type="Node" parent="Status_Machine"]
-
-[node name="Using_Equipment" type="Node" parent="Status_Machine"]
-
-[node name="Equipment_Machine" type="Node" parent="." node_paths=PackedStringArray("initial_equipmentstate")]
-script = ExtResource("2_5slag")
-initial_equipmentstate = NodePath("Muppet1")
-
-[node name="NoMuppet" type="Node" parent="Equipment_Machine"]
-script = ExtResource("4_0gqwn")
-
-[node name="Muppet1" type="Node" parent="Equipment_Machine" node_paths=PackedStringArray("equipment")]
-script = ExtResource("4_0gqwn")
-equipment = NodePath("../../UCharacterBody3D/Head/Equipment/EquipmentMeshA")
-
-[node name="Muppet2" type="Node" parent="Equipment_Machine" node_paths=PackedStringArray("equipment")]
-script = ExtResource("5_mknb3")
-equipment = NodePath("../../UCharacterBody3D/Head/Equipment/EquipmentMeshB")
-
-[node name="Muppet3" type="Node" parent="Equipment_Machine"]
+[node name="Player" type="Node" parent="."]
+script = ExtResource("1_2h4k3")

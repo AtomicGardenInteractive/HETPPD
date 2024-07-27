@@ -1,4 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://3ikss5hb1chi"]
+[gd_scene load_steps=12 format=3 uid="uid://3ikss5hb1chi"]
+
+[ext_resource type="PackedScene" uid="uid://bxgkepgoxk5vh" path="res://Assets/Enviroment/Ground/ground_flat.tscn" id="1_gghbu"]
+[ext_resource type="PackedScene" uid="uid://dgftuvi7l5djj" path="res://Assets/Enviroment/Ground/ground_half_slope.tscn" id="2_dtm7l"]
+[ext_resource type="PackedScene" uid="uid://bks44g7bb56d1" path="res://Assets/Enviroment/Ground/ground_shallow_slope.tscn" id="3_7lg3s"]
+[ext_resource type="PackedScene" uid="uid://0eqw4eyqsvut" path="res://Assets/Enviroment/Ground/ground_shallow_slope_connect.tscn" id="4_a1frd"]
+[ext_resource type="PackedScene" uid="uid://gwtvwkf6sjtj" path="res://Assets/Enviroment/Ground/ground_steep_slope.tscn" id="5_u3rwe"]
+[ext_resource type="PackedScene" uid="uid://bs7u4vh0a6sqg" path="res://Scenes/Player/player.tscn" id="6_m1hp7"]
+[ext_resource type="PackedScene" uid="uid://ogjq1mamcde4" path="res://Assets/Enviroment/Water/water.tscn" id="6_vniut"]
+[ext_resource type="PackedScene" uid="uid://b5www8kps20n6" path="res://Assets/Enviroment/Rocks/rock_1.tscn" id="8_s3qx4"]
+[ext_resource type="PackedScene" uid="uid://cjeq4hydm4sfh" path="res://Assets/Enviroment/Rocks/rock_2.tscn" id="9_w4v3o"]
+[ext_resource type="PackedScene" uid="uid://pbb5f64vbfg" path="res://Assets/Enviroment/Rocks/rock_3.tscn" id="10_r0pay"]
 
 [sub_resource type="Environment" id="Environment_q64fx"]
 ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
@@ -7,7 +18,8 @@ volumetric_fog_length = 3.17
 
 [node name="main_level" type="Node3D"]
 
-[node name="World" type="Node" parent="."]
+[node name="World" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
 environment = SubResource("Environment_q64fx")
@@ -15,3 +27,140 @@ environment = SubResource("Environment_q64fx")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
 transform = Transform3D(0.79149, -0.354872, 0.497604, 0, 0.814166, 0.580632, -0.611182, -0.459565, 0.644404, 0, 0, 0)
 shadow_enabled = true
+
+[node name="Beach" type="Node3D" parent="."]
+
+[node name="Ground" type="Node3D" parent="Beach"]
+
+[node name="GroundFlat" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
+
+[node name="GroundFlat8" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="GroundFlat2" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="GroundHalfSlope" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.278, 10)
+
+[node name="GroundHalfSlope2" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.6874, -49.9044)
+
+[node name="GroundShallowSlope" parent="Beach/Ground" instance=ExtResource("3_7lg3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.902466, -19.9721)
+
+[node name="GroundShallowSlopeConnect" parent="Beach/Ground" instance=ExtResource("4_a1frd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.97, 20)
+
+[node name="GroundSteepSlope" parent="Beach/Ground" instance=ExtResource("5_u3rwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.30036, -29.9044)
+
+[node name="GroundSteepSlope2" parent="Beach/Ground" instance=ExtResource("5_u3rwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.80136, -39.9044)
+
+[node name="GroundFlat3" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="GroundFlat4" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
+
+[node name="GroundFlat9" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
+transform = Transform3D(9.01357, 0, 0, 0, 0.996484, -0.755177, 0, 0.0837822, 8.98188, 10, -7.6838, 68)
+
+[node name="GroundHalfSlope3" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.278, 10)
+
+[node name="GroundHalfSlope4" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 11.6874, -49.9044)
+
+[node name="GroundShallowSlope2" parent="Beach/Ground" instance=ExtResource("3_7lg3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.902466, -19.9721)
+
+[node name="GroundShallowSlopeConnect2" parent="Beach/Ground" instance=ExtResource("4_a1frd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1.97, 20)
+
+[node name="GroundSteepSlope3" parent="Beach/Ground" instance=ExtResource("5_u3rwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4.30036, -29.9044)
+
+[node name="GroundSteepSlope4" parent="Beach/Ground" instance=ExtResource("5_u3rwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 8.80136, -39.9044)
+
+[node name="GroundFlat5" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="GroundFlat7" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
+
+[node name="GroundFlat6" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -10)
+
+[node name="GroundHalfSlope5" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.278, 10)
+
+[node name="GroundHalfSlope6" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 11.6874, -49.9044)
+
+[node name="GroundShallowSlope3" parent="Beach/Ground" instance=ExtResource("3_7lg3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0.902466, -19.9721)
+
+[node name="GroundShallowSlopeConnect3" parent="Beach/Ground" instance=ExtResource("4_a1frd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -1.97, 20)
+
+[node name="GroundHalfSlope10" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, -0.278, 10)
+
+[node name="GroundShallowSlopeConnect7" parent="Beach/Ground" instance=ExtResource("4_a1frd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, -1.97, 20)
+
+[node name="GroundHalfSlope11" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -0.278, 10)
+
+[node name="GroundShallowSlopeConnect8" parent="Beach/Ground" instance=ExtResource("4_a1frd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -1.97, 20)
+
+[node name="GroundHalfSlope12" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.278, 10)
+
+[node name="GroundShallowSlopeConnect9" parent="Beach/Ground" instance=ExtResource("4_a1frd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -1.97, 20)
+
+[node name="GroundHalfSlope7" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -0.278, 10)
+
+[node name="GroundShallowSlopeConnect4" parent="Beach/Ground" instance=ExtResource("4_a1frd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -1.97, 20)
+
+[node name="GroundHalfSlope8" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, -0.278, 10)
+
+[node name="GroundShallowSlopeConnect5" parent="Beach/Ground" instance=ExtResource("4_a1frd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, -1.97, 20)
+
+[node name="GroundHalfSlope9" parent="Beach/Ground" instance=ExtResource("2_dtm7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -0.278, 10)
+
+[node name="GroundShallowSlopeConnect6" parent="Beach/Ground" instance=ExtResource("4_a1frd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -1.97, 20)
+
+[node name="GroundSteepSlope5" parent="Beach/Ground" instance=ExtResource("5_u3rwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 4.30036, -29.9044)
+
+[node name="GroundSteepSlope6" parent="Beach/Ground" instance=ExtResource("5_u3rwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 8.80136, -39.9044)
+
+[node name="Water" parent="Beach" instance=ExtResource("6_vniut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 116)
+
+[node name="Rocks" type="Node3D" parent="Beach"]
+
+[node name="Player" parent="." instance=ExtResource("6_m1hp7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.415822, 0)
+
+[node name="Rock1" parent="." instance=ExtResource("8_s3qx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.029, -0.0757276, 5.14544)
+
+[node name="Rock2" parent="." instance=ExtResource("9_w4v3o")]
+transform = Transform3D(-0.0713756, 0, 0.99745, 0, 1, 0, -0.99745, 0, -0.0713756, 10.6464, 10.372, -54.8681)
+
+[node name="Rock3" parent="." instance=ExtResource("10_r0pay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34519, -0.099001, 7.63575)

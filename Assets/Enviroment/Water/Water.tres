@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ythgis0cf6u"]
+
+[ext_resource type="Texture2D" uid="uid://ch3bu1ivm5naf" path="res://Assets/Enviroment/Water/WaterCrunched.jpg" id="1_qkoes"]
+
+[resource]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.235294)
+albedo_texture = ExtResource("1_qkoes")
+roughness = 0.0
+heightmap_flip_texture = true
+subsurf_scatter_strength = 0.96
+backlight = Color(1, 1, 1, 1)
+uv1_world_triplanar = true
+texture_filter = 2

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cukv3yudscl5y"
-path="res://.godot/imported/Plane0.2H20%Incline.glb-a5ec794a3e4b24fd74365681356f506a.scn"
+path="res://.godot/imported/Plane0.2H20%Incline.glb-a3032af59372929ad7bb0320e9a3ed84.scn"
 
 [deps]
 
-source_file="res://Assets/Enviroment/Plane0.2H20%Incline.glb"
-dest_files=["res://.godot/imported/Plane0.2H20%Incline.glb-a5ec794a3e4b24fd74365681356f506a.scn"]
+source_file="res://Assets/Enviroment/Ground/Plane0.2H20%Incline.glb"
+dest_files=["res://.godot/imported/Plane0.2H20%Incline.glb-a3032af59372929ad7bb0320e9a3ed84.scn"]
 
 [params]
 
@@ -29,6 +29,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"@MATERIAL:0": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Sand.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

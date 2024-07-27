@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ie5ftqb6vnf"
-path.s3tc="res://.godot/imported/Sand.png-297b1edc89173c400c55937263a19852.s3tc.ctex"
+uid="uid://ch3bu1ivm5naf"
+path.s3tc="res://.godot/imported/WaterCrunched.jpg-4b32f6a2f8ef653b4d301fd94a1386e8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Enviroment/Sand.png"
-dest_files=["res://.godot/imported/Sand.png-297b1edc89173c400c55937263a19852.s3tc.ctex"]
+source_file="res://Assets/Enviroment/Water/WaterCrunched.jpg"
+dest_files=["res://.godot/imported/WaterCrunched.jpg-4b32f6a2f8ef653b4d301fd94a1386e8.s3tc.ctex"]
 
 [params]
 
