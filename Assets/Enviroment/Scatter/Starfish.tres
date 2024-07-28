@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bfli58hlacbub"]
+
+[ext_resource type="Texture2D" uid="uid://cj52oi6vpgny4" path="res://Assets/Enviroment/Scatter/redsandCrunchy.jpg" id="1_vtado"]
+
+[resource]
+albedo_texture = ExtResource("1_vtado")
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

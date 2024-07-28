@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bjys5205ey6n"]
+
+[ext_resource type="Texture2D" uid="uid://b3yhxwdq0ntus" path="res://Assets/Enviroment/Scatter/ShellsCrunchy.jpg" id="1_ppv2k"]
+
+[resource]
+albedo_color = Color(0.999998, 0.997303, 0.743854, 1)
+albedo_texture = ExtResource("1_ppv2k")
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

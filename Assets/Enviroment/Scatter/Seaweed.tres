@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c1ndakahx3kg"]
+
+[ext_resource type="Texture2D" uid="uid://bof4ei5jrmnhp" path="res://Assets/Enviroment/Scatter/SeaweedCrunchy.jpg" id="1_mnk2w"]
+
+[resource]
+albedo_texture = ExtResource("1_mnk2w")
+uv1_scale = Vector3(0.33, 0.33, 0.33)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

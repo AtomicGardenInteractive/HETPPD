@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dpj0h2b1g7cbl"]
+
+[ext_resource type="Texture2D" uid="uid://cj52oi6vpgny4" path="res://Assets/Enviroment/Scatter/redsandCrunchy.jpg" id="1_8037a"]
+
+[resource]
+albedo_color = Color(0, 0.482585, 0.482841, 1)
+albedo_texture = ExtResource("1_8037a")
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

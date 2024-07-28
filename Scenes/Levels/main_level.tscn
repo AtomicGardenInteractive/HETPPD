@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://3ikss5hb1chi"]
+[gd_scene load_steps=19 format=3 uid="uid://3ikss5hb1chi"]
 
 [ext_resource type="PackedScene" uid="uid://bxgkepgoxk5vh" path="res://Assets/Enviroment/Ground/ground_flat.tscn" id="1_gghbu"]
 [ext_resource type="PackedScene" uid="uid://dgftuvi7l5djj" path="res://Assets/Enviroment/Ground/ground_half_slope.tscn" id="2_dtm7l"]
@@ -9,7 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://ogjq1mamcde4" path="res://Assets/Enviroment/Water/water.tscn" id="6_vniut"]
 [ext_resource type="PackedScene" uid="uid://b5www8kps20n6" path="res://Assets/Enviroment/Rocks/rock_1.tscn" id="8_s3qx4"]
 [ext_resource type="PackedScene" uid="uid://cjeq4hydm4sfh" path="res://Assets/Enviroment/Rocks/rock_2.tscn" id="9_w4v3o"]
+[ext_resource type="PackedScene" uid="uid://dueg0txl7c22c" path="res://Assets/Enviroment/Cliffs/cliff_1.tscn" id="10_3ftow"]
 [ext_resource type="PackedScene" uid="uid://pbb5f64vbfg" path="res://Assets/Enviroment/Rocks/rock_3.tscn" id="10_r0pay"]
+[ext_resource type="PackedScene" uid="uid://bscraecktxilj" path="res://Assets/Enviroment/Cliffs/cliff_2.tscn" id="11_1k8si"]
+[ext_resource type="PackedScene" uid="uid://q3j51vnvgpt0" path="res://Assets/Enviroment/Cliffs/cliff_3.tscn" id="12_r4a4m"]
+[ext_resource type="PackedScene" uid="uid://4txelvnxp2us" path="res://Assets/Enviroment/Scatter/starfish.tscn" id="13_rui0t"]
+[ext_resource type="PackedScene" uid="uid://bkow2qbgrpru2" path="res://Assets/Enviroment/Scatter/starfishblu.tscn" id="14_vh7fw"]
+[ext_resource type="PackedScene" uid="uid://dro2qusbm74uy" path="res://Assets/Enviroment/Scatter/shell.tscn" id="15_nr72j"]
+[ext_resource type="PackedScene" uid="uid://vdcm2rmrehe0" path="res://Assets/Enviroment/Scatter/seaweed_bank.tscn" id="17_b0cp1"]
 
 [sub_resource type="Environment" id="Environment_q64fx"]
 ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
@@ -31,6 +38,7 @@ shadow_enabled = true
 [node name="Beach" type="Node3D" parent="."]
 
 [node name="Ground" type="Node3D" parent="Beach"]
+metadata/_edit_lock_ = true
 
 [node name="GroundFlat" parent="Beach/Ground" instance=ExtResource("1_gghbu")]
 
@@ -150,17 +158,211 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 8.80136, -39.9044)
 
 [node name="Water" parent="Beach" instance=ExtResource("6_vniut")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 116)
+metadata/_edit_lock_ = true
 
 [node name="Rocks" type="Node3D" parent="Beach"]
+metadata/_edit_lock_ = true
+
+[node name="Rock1" parent="Beach/Rocks" instance=ExtResource("8_s3qx4")]
+transform = Transform3D(1.06375, 0, -0.611721, -0.734931, 0.595594, -0.743353, 0.321282, 1.36242, 0.324964, -16.5297, -2.82685, 19.0462)
+
+[node name="Rock6" parent="Beach/Rocks" instance=ExtResource("8_s3qx4")]
+transform = Transform3D(0.0730542, -0.641563, -0.914919, -1.25984, -0.463852, 0.0933693, -0.427058, 1.25863, -0.431953, 18.5049, 10.4214, -38.1831)
+
+[node name="Rock7" parent="Beach/Rocks" instance=ExtResource("8_s3qx4")]
+transform = Transform3D(0.0730542, -0.641563, -0.914919, 0.449177, -1.25027, 0.430242, -1.25212, -0.485943, 0.100961, 16.7907, 4.06285, -33.4189)
+
+[node name="Rock8" parent="Beach/Rocks" instance=ExtResource("8_s3qx4")]
+transform = Transform3D(1.12006, 0.700821, 0.270808, 0.655269, -1.29451, -0.0120955, 0.30166, 0.209803, -0.979232, 2.46098, 1.65134, -29.0101)
+
+[node name="Rock9" parent="Beach/Rocks" instance=ExtResource("8_s3qx4")]
+transform = Transform3D(0.243893, 0.133879, 0.994691, -0.780019, -1.1746, 0.185066, 1.05214, -0.901839, -0.0933748, 4.82297, 1.65134, -29.2392)
+
+[node name="Rock16" parent="Beach/Rocks" instance=ExtResource("8_s3qx4")]
+transform = Transform3D(0.243893, 0.133879, 0.994691, -0.780019, -1.1746, 0.185066, 1.05214, -0.901839, -0.0933748, 29.6871, -1.54112, 8.80824)
+
+[node name="Rock17" parent="Beach/Rocks" instance=ExtResource("8_s3qx4")]
+transform = Transform3D(0.350973, 0.707337, -0.0775084, -0.621382, 0.214118, 1.60935, 0.63907, -0.180273, 1.60738, 30.3486, -1.54112, 11.147)
+
+[node name="Rock4" parent="Beach/Rocks" instance=ExtResource("8_s3qx4")]
+transform = Transform3D(1.24715, 0, 1.64791, 0, 1.00046, 0, -0.932139, 0, 2.20481, -20.4136, -0.463243, 7.03772)
+
+[node name="Rock2" parent="Beach/Rocks" instance=ExtResource("9_w4v3o")]
+transform = Transform3D(-0.0713756, 0, 0.99745, 0, 1, 0, -0.99745, 0, -0.0713756, 10.6464, 10.372, -54.8681)
+
+[node name="Rock3" parent="Beach/Rocks" instance=ExtResource("10_r0pay")]
+transform = Transform3D(-1.12105, 0, 0.816782, 0.790329, -0.921691, 0.78794, 0.542041, 1.34388, 0.540403, -24.7416, -2.92499, 21.5398)
+
+[node name="Rock5" parent="Beach/Rocks" instance=ExtResource("10_r0pay")]
+transform = Transform3D(-0.421141, -1.48224, 0.379426, 1.40988, -0.476946, 0.0281168, 0.100291, 0.480634, 1.19802, 12.2238, -1.6394, -4.45167)
+
+[node name="Rock10" parent="Beach/Rocks" instance=ExtResource("10_r0pay")]
+transform = Transform3D(-0.489222, -2.52154, 1.23912, 1.6378, -0.811364, 0.091823, 0.116503, 0.817638, 3.91247, 21.1788, -1.6394, -18.1214)
+
+[node name="Rock11" parent="Beach/Rocks" instance=ExtResource("10_r0pay")]
+transform = Transform3D(0.473343, 1.22934, 3.35002, 2.87022, -0.624436, 0.0934398, 0.743431, 1.62808, -2.49371, 58.3995, -1.96703, 23.4002)
+
+[node name="Rock12" parent="Beach/Rocks" instance=ExtResource("10_r0pay")]
+transform = Transform3D(-0.0101854, 2.26055, 2.04194, 0.76918, 0.519255, -1.33434, -0.316959, 1.18746, -3.30372, 43.5377, -1.96703, 43.0809)
+
+[node name="Rock13" parent="Beach/Rocks" instance=ExtResource("10_r0pay")]
+transform = Transform3D(0.701624, 1.3981, -0.12605, -0.0736036, 0.214343, -4.07658, -0.441034, 2.18841, 0.479807, 53.0274, -1.96703, 39.1524)
+
+[node name="Rock14" parent="Beach/Rocks" instance=ExtResource("10_r0pay")]
+transform = Transform3D(0.921042, 0.766431, 0.38557, -0.0693426, -0.0980319, 4.0158, 0.746045, -0.955322, -0.102755, -34.7482, -1.96703, 46.0339)
+
+[node name="Rock15" parent="Beach/Rocks" instance=ExtResource("10_r0pay")]
+transform = Transform3D(0.921042, 0.766431, 0.38557, 0.0517206, 0.120545, -4.01226, -0.747473, 0.952743, 0.197478, -34.7482, -7.15906, 55.978)
+
+[node name="Cliff" type="Node3D" parent="Beach"]
+metadata/_edit_lock_ = true
+
+[node name="Left" type="Node3D" parent="Beach/Cliff"]
+
+[node name="Cliff1" parent="Beach/Cliff/Left" instance=ExtResource("10_3ftow")]
+transform = Transform3D(0.814875, 0, -0.579637, 0, 1, 0, 0.579637, 0, 0.814875, -17.9788, 2.00569, 0)
+
+[node name="Cliff2" parent="Beach/Cliff/Left" instance=ExtResource("11_1k8si")]
+transform = Transform3D(0.99688, 0, 0.078929, 0.0230937, 0.956238, -0.291676, -0.0754749, 0.292589, 0.953255, -4.55453, 0.660769, -11.0828)
+
+[node name="Cliff9" parent="Beach/Cliff/Left" instance=ExtResource("11_1k8si")]
+transform = Transform3D(1.42005, 6.15701e-09, 0.143995, -0.0431772, 1.65318, 0.698411, -0.103813, -0.687578, 1.67923, -7.05748, 4.5083, -26.5674)
+
+[node name="Cliff5" parent="Beach/Cliff/Left" instance=ExtResource("11_1k8si")]
+transform = Transform3D(0.97392, -0.0873887, -0.209387, 0.134848, 0.965117, 0.224422, 0.182471, -0.246804, 0.951731, -36.1398, 0.592387, 17.7845)
+
+[node name="Cliff6" parent="Beach/Cliff/Left" instance=ExtResource("11_1k8si")]
+transform = Transform3D(0.980216, -0.163051, 0.112212, 0.132109, 0.961108, 0.242527, -0.147392, -0.222904, 0.963633, -36.1398, -4.2692, 31.0527)
+
+[node name="Cliff14" parent="Beach/Cliff/Left" instance=ExtResource("11_1k8si")]
+transform = Transform3D(0.547609, -0.563063, 0.618938, 0.323508, 0.824658, 0.463985, -0.771665, -0.053851, 0.633746, -19.0128, -7.33379, 84.6031)
+
+[node name="Cliff15" parent="Beach/Cliff/Left" instance=ExtResource("11_1k8si")]
+transform = Transform3D(0.364906, 0.712123, 0.59977, 0.911429, -0.141688, -0.386292, -0.190108, 0.687608, -0.700753, 0.461241, -7.30034, 92.2278)
+
+[node name="Cliff7" parent="Beach/Cliff/Left" instance=ExtResource("11_1k8si")]
+transform = Transform3D(-0.160028, 0.262141, -0.951669, 0.132109, 0.961108, 0.242527, 0.978232, -0.0869126, -0.188435, -42.7753, -2.42989, 30.5015)
+
+[node name="Cliff8" parent="Beach/Cliff/Left" instance=ExtResource("11_1k8si")]
+transform = Transform3D(0.23911, 0.199436, -0.95029, 0.959353, -0.199603, 0.1995, -0.149893, -0.959367, -0.239056, -42.9375, 0.382676, 25.8609)
+
+[node name="Cliff13" parent="Beach/Cliff/Left" instance=ExtResource("11_1k8si")]
+transform = Transform3D(0.0516413, 0.373689, -3.06393, 1.22597, 0.0927908, 0.151918, 0.05742, -2.31725, -0.488019, -61.7397, 5.67744, 7.68684)
+
+[node name="Cliff3" parent="Beach/Cliff/Left" instance=ExtResource("12_r4a4m")]
+transform = Transform3D(0.3975, 0, -0.917602, 0, 1, 0, 0.917602, 0, 0.3975, -8.99448, 0.962677, -6.88172)
+
+[node name="Cliff10" parent="Beach/Cliff/Left" instance=ExtResource("12_r4a4m")]
+transform = Transform3D(1.59273, 0.0633921, 0.406307, 0.0363856, -2.07374, 0.228177, 0.193322, -0.131967, -3.39041, -6.3454, 6.09221, -43.4868)
+
+[node name="Cliff11" parent="Beach/Cliff/Left" instance=ExtResource("12_r4a4m")]
+transform = Transform3D(0.366732, 1.43395, -2.3512, 1.56092, -0.399502, 0.446884, -0.0673317, -1.45121, -2.44626, -22.8298, 2.17112, -17.0578)
+
+[node name="Cliff12" parent="Beach/Cliff/Left" instance=ExtResource("12_r4a4m")]
+transform = Transform3D(0.261689, -1.65469, 1.99518, 1.57033, 0.113966, -0.680485, 0.202698, 1.25334, 2.69597, -38.144, 5.8759, -8.12479)
+
+[node name="Cliff4" parent="Beach/Cliff/Left" instance=ExtResource("12_r4a4m")]
+transform = Transform3D(0.287865, 0, -1.36709, 0, 0.998772, 0, 1.00516, 0, 0.391517, -29.6012, 2.3244, 5.47118)
+
+[node name="Right" type="Node3D" parent="Beach/Cliff"]
+
+[node name="Cliff14" parent="Beach/Cliff/Right" instance=ExtResource("12_r4a4m")]
+transform = Transform3D(-0.71387, 0.317971, -0.623926, 0.3879, 0.921342, 0.0257225, 0.583028, -0.223659, -0.78106, 27.7011, 0.962675, -10.2059)
+
+[node name="Cliff16" parent="Beach/Cliff/Right" instance=ExtResource("12_r4a4m")]
+transform = Transform3D(-0.951473, -0.239781, -0.192886, 0.294126, -0.892915, -0.34087, -0.0904969, -0.381061, 0.92011, 25.1689, 5.56445, -29.1571)
+
+[node name="Cliff15" parent="Beach/Cliff/Right" instance=ExtResource("12_r4a4m")]
+transform = Transform3D(-0.585666, 0.865412, -0.544758, 0.492144, 1.19659, 0.291534, 0.556389, -0.147472, -0.831295, 32.5459, -1.66294, -3.29324)
+
+[node name="Cliff2" parent="Beach/Cliff/Right" instance=ExtResource("11_1k8si")]
+transform = Transform3D(-0.231065, 1.70914, 0.217108, 0.219285, 0.0498999, 1.0843, 0.411615, 0.932862, -0.455775, 43.4207, 2.86102e-06, 6.64636)
+
+[node name="Cliff5" parent="Beach/Cliff/Right" instance=ExtResource("11_1k8si")]
+transform = Transform3D(-0.0179345, 1.58232, 0.696262, 0.517908, -0.051502, 0.114581, 0.0485172, 1.13468, -0.965743, 49.4583, 5.46116, -3.80775)
+
+[node name="Cliff8" parent="Beach/Cliff/Right" instance=ExtResource("11_1k8si")]
+transform = Transform3D(-0.101608, 2.17336, 0.378368, 0.999914, 0.581522, -0.234789, -0.379045, 0.951445, -0.720794, 66.4052, 6.92314, 5.01083)
+
+[node name="Cliff6" parent="Beach/Cliff/Right" instance=ExtResource("11_1k8si")]
+transform = Transform3D(-0.0451281, 1.14, 0.964247, 0.518082, 0.0340495, 0.112862, 0.02141, 1.57897, -0.698613, 38.3131, 5.46116, -12.9631)
+
+[node name="Cliff7" parent="Beach/Cliff/Right" instance=ExtResource("11_1k8si")]
+transform = Transform3D(-0.0484557, -0.122249, 1.1885, 0.506056, -0.429931, 0.0922774, 0.111638, 1.89581, 0.0975656, 38.599, 6.98305, -27.0622)
+
+[node name="Cliff3" parent="Beach/Cliff/Right" instance=ExtResource("12_r4a4m")]
+transform = Transform3D(-1.02179, -0.585236, 1.1858, 0.356206, -1.4309, -0.64244, 0.751358, -0.117514, 1.91717, 62.2171, 0.329696, 18.7968)
+
+[node name="Cliff4" parent="Beach/Cliff/Right" instance=ExtResource("11_1k8si")]
+transform = Transform3D(-1.01126, 0.502089, -0.187104, 0.482064, 0.761226, 1.73675, 0.343018, 0.410416, -2.99236, 26.8269, 6.33157, -30.8547)
+
+[node name="Cliff1" parent="Beach/Cliff/Right" instance=ExtResource("10_3ftow")]
+transform = Transform3D(-0.394525, 0, -1.01811, 0, 1, 0, 0.358914, 0, -1.11913, 23.9003, 16.0544, -52.9514)
+
+[node name="Scatter" type="Node3D" parent="Beach"]
+
+[node name="Starfish" parent="Beach/Scatter" instance=ExtResource("13_rui0t")]
+transform = Transform3D(0.0987593, -0.0157038, 0, 0.0156304, 0.098298, -0.00965407, 0.00151605, 0.00953428, 0.0995329, 22, -0.97499, 15)
+
+[node name="Starfish3" parent="Beach/Scatter" instance=ExtResource("13_rui0t")]
+transform = Transform3D(0.0480311, -0.0561609, -0.0673718, 0.0765482, 0.0643389, 0.000940584, 0.042818, -0.0520237, 0.0738928, 29.7209, 1.11519, 11.8873)
+
+[node name="Starfish6" parent="Beach/Scatter" instance=ExtResource("13_rui0t")]
+transform = Transform3D(0.089848, -0.0185643, -0.0397832, 0.014455, 0.0980761, -0.0131201, 0.0414535, 0.00603752, 0.0908028, 11.8796, -2.25429, 21.346)
+
+[node name="Starfish7" parent="Beach/Scatter" instance=ExtResource("13_rui0t")]
+transform = Transform3D(0.08931, -0.00284275, -0.044896, -0.0071922, 0.0976141, -0.020488, 0.0444072, 0.0215269, 0.0869746, 33.6377, -2.04323, 19.7796)
+
+[node name="Starfish2" parent="Beach/Scatter" instance=ExtResource("14_vh7fw")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.0725779, 0)
+
+[node name="Starfish4" parent="Beach/Scatter" instance=ExtResource("14_vh7fw")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -7.19025, -0.0779988, 6.24075)
+
+[node name="Starfish5" parent="Beach/Scatter" instance=ExtResource("14_vh7fw")]
+transform = Transform3D(0.048343, 0.0844172, 0.0231664, -0.0862957, 0.0504009, -0.0035789, -0.0146973, -0.0182615, 0.0972137, -16.0749, -1.33764, 17.6779)
+
+[node name="Shell" parent="Beach/Scatter" instance=ExtResource("15_nr72j")]
+transform = Transform3D(0.0986698, 0.0159901, -0.0029304, -0.0160103, 0.0987089, -0.000467286, 0.00281785, 0.000930239, 0.0999559, 13.1279, 0.00819279, -12.1566)
+
+[node name="Shell2" parent="Beach/Scatter" instance=ExtResource("15_nr72j")]
+transform = Transform3D(0.1, 0, 0, 0, 0.0999552, -0.00299105, 0, 0.00299105, 0.0999552, 13.6013, -0.101359, -0.186067)
+
+[node name="Shell3" parent="Beach/Scatter" instance=ExtResource("15_nr72j")]
+transform = Transform3D(0.1, 0, 0, 0, 0.0960668, -0.02777, 0, 0.02777, 0.0960668, -1.90656, -1.67527, 18.0575)
+
+[node name="Shell4" parent="Beach/Scatter" instance=ExtResource("15_nr72j")]
+transform = Transform3D(0.098662, -0.0160719, 0.0027374, 0.0157423, 0.0982811, 0.00964339, -0.00424022, -0.00908343, 0.0994962, 12.1019, 0.0128433, 3.57888)
+
+[node name="Shell5" parent="Beach/Scatter" instance=ExtResource("15_nr72j")]
+transform = Transform3D(0.0992312, 0.0122, -0.00207794, -0.0123757, 0.0978225, -0.0166614, -2.42938e-10, 0.0167904, 0.0985803, 17.1497, 0.0899299, 1.44054)
+
+[node name="Shell6" parent="Beach/Scatter" instance=ExtResource("15_nr72j")]
+transform = Transform3D(0.0999692, -0.00244637, 0.000416672, 0.00247579, 0.0971703, -0.0234904, 0.000169781, 0.0234935, 0.0972009, 8.59334, 0.583409, -18.2994)
+
+[node name="Shell7" parent="Beach/Scatter" instance=ExtResource("15_nr72j")]
+transform = Transform3D(0.0999692, -0.00244637, 0.000416672, 0.00215418, 0.0772115, -0.0635117, 0.00123201, 0.0635011, 0.0772404, 10.9186, 8.95432, -39.94)
+
+[node name="Shell8" parent="Beach/Scatter" instance=ExtResource("15_nr72j")]
+transform = Transform3D(0.0999692, -0.00244637, 0.000416672, 0.00232285, 0.0863366, -0.0504042, 0.000873334, 0.0503984, 0.0863669, 6.18276, 7.31503, -37.156)
 
 [node name="Player" parent="." instance=ExtResource("6_m1hp7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.415822, 0)
 
-[node name="Rock1" parent="." instance=ExtResource("8_s3qx4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.029, -0.0757276, 5.14544)
+[node name="SeaweedBank" parent="." instance=ExtResource("17_b0cp1")]
+transform = Transform3D(-0.088896, 0.000664647, 3.37946, 0.286064, 0.693268, 0.0450014, -1.3056, 0.151853, -0.220241, -6.09194, -1.87721, 16.3392)
 
-[node name="Rock2" parent="." instance=ExtResource("9_w4v3o")]
-transform = Transform3D(-0.0713756, 0, 0.99745, 0, 1, 0, -0.99745, 0, -0.0713756, 10.6464, 10.372, -54.8681)
+[node name="SeaweedBank4" parent="." instance=ExtResource("17_b0cp1")]
+transform = Transform3D(-0.088896, 0.000664647, 3.37946, 0.286064, 0.693268, 0.0450014, -1.3056, 0.151853, -0.220241, 18.323, -1.87721, 16.3392)
 
-[node name="Rock3" parent="." instance=ExtResource("10_r0pay")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34519, -0.099001, 7.63575)
+[node name="SeaweedBank5" parent="." instance=ExtResource("17_b0cp1")]
+transform = Transform3D(-0.088896, 0.000664647, 3.37946, 0.286064, 0.693268, 0.0450014, -1.3056, 0.151853, -0.220241, 25.8599, -1.87721, 16.3392)
+
+[node name="SeaweedBank6" parent="." instance=ExtResource("17_b0cp1")]
+transform = Transform3D(-0.088896, 0.000664647, 3.37946, 0.286064, 0.693268, 0.0450014, -1.3056, 0.151853, -0.220241, 31.5774, -1.87721, 16.3392)
+
+[node name="SeaweedBank3" parent="." instance=ExtResource("17_b0cp1")]
+transform = Transform3D(0.0882644, 0.0158401, 3.37872, 0.282068, 0.693327, -0.121137, -1.30651, 0.150755, 0.202104, 41.2253, -1.81649, 16.3392)
+
+[node name="SeaweedBank2" parent="." instance=ExtResource("17_b0cp1")]
+transform = Transform3D(-0.088896, 0.000664647, 3.37946, 0.286064, 0.693268, 0.0450014, -1.3056, 0.151853, -0.220241, -24.117, -1.65455, 14.9269)

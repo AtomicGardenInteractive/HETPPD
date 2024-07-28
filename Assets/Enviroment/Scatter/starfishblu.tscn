@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkow2qbgrpru2"]
+
+[ext_resource type="PackedScene" uid="uid://c25m7ju74grup" path="res://Assets/Enviroment/Scatter/Starfish.glb" id="1_knamt"]
+[ext_resource type="Material" uid="uid://dpj0h2b1g7cbl" path="res://Assets/Enviroment/Scatter/Starfishblu.tres" id="2_0mh6m"]
+
+[node name="Starfish" instance=ExtResource("1_knamt")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="Cube" parent="." index="0"]
+material_override = ExtResource("2_0mh6m")

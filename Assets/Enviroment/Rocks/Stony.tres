@@ -3,10 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dw6jmxe00riim" path="res://Assets/Enviroment/Rocks/StonyCrunchy.jpg" id="1_iqhks"]
 
 [resource]
-albedo_color = Color(0.560955, 0.560955, 0.560955, 1)
 albedo_texture = ExtResource("1_iqhks")
-roughness = 0.0
-uv1_scale = Vector3(0.65, 0.65, 0.65)
+uv1_scale = Vector3(0.24, 0.24, 0.24)
 uv1_triplanar = true
 uv1_world_triplanar = true
 texture_filter = 2

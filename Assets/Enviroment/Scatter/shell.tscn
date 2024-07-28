@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dro2qusbm74uy"]
+
+[ext_resource type="PackedScene" uid="uid://cw4dhuqmxixho" path="res://Assets/Enviroment/Scatter/Shell.glb" id="1_q6yhx"]
+[ext_resource type="Material" uid="uid://bjys5205ey6n" path="res://Assets/Enviroment/Scatter/Shell.tres" id="2_vq1c2"]
+
+[node name="Shell" instance=ExtResource("1_q6yhx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0459414, 0, 0)
+
+[node name="Cube_001" parent="." index="0"]
+material_override = ExtResource("2_vq1c2")
