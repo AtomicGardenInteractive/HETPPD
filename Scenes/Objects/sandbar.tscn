@@ -1,0 +1,430 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce2vjybe5fhp7"]
+
+[ext_resource type="PackedScene" uid="uid://bxgkepgoxk5vh" path="res://Assets/Enviroment/Ground/Beach/ground_flat.tscn" id="1_7cmlm"]
+[ext_resource type="PackedScene" uid="uid://dgftuvi7l5djj" path="res://Assets/Enviroment/Ground/Beach/ground_half_slope.tscn" id="2_jhqhu"]
+[ext_resource type="PackedScene" uid="uid://0eqw4eyqsvut" path="res://Assets/Enviroment/Ground/Beach/ground_shallow_slope_connect.tscn" id="3_5qt2n"]
+
+[node name="Sandbar" type="Node3D"]
+
+[node name="GroundFlat18" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 0, 0, 0)
+
+[node name="GroundFlat30" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 0, 0, -10)
+
+[node name="GroundHalfSlope21" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 0, -0.272571, 10)
+
+[node name="GroundHalfSlope33" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 0, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect18" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 0, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect30" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 0, -1.97357, -29.9983)
+
+[node name="GroundFlat31" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 10, 0, 0)
+
+[node name="GroundFlat32" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 10, 0, -10)
+
+[node name="GroundHalfSlope34" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 10, -0.272571, 10)
+
+[node name="GroundHalfSlope35" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 10, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect31" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 10, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect32" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 10, -1.97357, -29.9983)
+
+[node name="GroundFlat33" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 20, 0, 0)
+
+[node name="GroundFlat34" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 20, 0, -10)
+
+[node name="GroundHalfSlope36" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 20, -0.272571, 10)
+
+[node name="GroundHalfSlope37" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 20, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect33" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 20, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect34" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 20, -1.97357, -29.9983)
+
+[node name="GroundFlat35" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 30, 0, 0)
+
+[node name="GroundFlat36" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 30, 0, -10)
+
+[node name="GroundHalfSlope38" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 30, -0.272571, 10)
+
+[node name="GroundHalfSlope39" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 30, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect35" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 30, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect36" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 30, -1.97357, -29.9983)
+
+[node name="GroundFlat37" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 40, 0, 0)
+
+[node name="GroundFlat38" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 40, 0, -10)
+
+[node name="GroundHalfSlope40" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 40, -0.272571, 10)
+
+[node name="GroundHalfSlope41" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 40, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect37" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 40, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect38" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 40, -1.97357, -29.9983)
+
+[node name="GroundFlat39" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 50, 0, 0)
+
+[node name="GroundFlat40" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 50, 0, -10)
+
+[node name="GroundHalfSlope42" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 50, -0.272571, 10)
+
+[node name="GroundHalfSlope43" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 50, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect39" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 50, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect40" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 50, -1.97357, -29.9983)
+
+[node name="GroundFlat41" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 60, 0, 0)
+
+[node name="GroundFlat42" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 60, 0, -10)
+
+[node name="GroundHalfSlope44" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 60, -0.272571, 10)
+
+[node name="GroundHalfSlope45" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 60, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect41" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 60, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect42" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 60, -1.97357, -29.9983)
+
+[node name="GroundFlat43" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 70, 0, 0)
+
+[node name="GroundFlat44" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 70, 0, -10)
+
+[node name="GroundHalfSlope46" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 70, -0.272571, 10)
+
+[node name="GroundHalfSlope47" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 70, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect43" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 70, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect44" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 70, -1.97357, -29.9983)
+
+[node name="GroundFlat45" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 80, 0, 0)
+
+[node name="GroundFlat46" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 80, 0, -10)
+
+[node name="GroundHalfSlope48" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 80, -0.272571, 10)
+
+[node name="GroundHalfSlope49" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 80, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect45" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 80, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect46" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 80, -1.97357, -29.9983)
+
+[node name="GroundFlat47" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 90, 0, 0)
+
+[node name="GroundFlat48" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 90, 0, -10)
+
+[node name="GroundHalfSlope50" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 90, -0.272571, 10)
+
+[node name="GroundHalfSlope51" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 90, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect47" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 90, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect48" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, 90, -1.97357, -29.9983)
+
+[node name="GroundFlat19" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -100, 0, 0)
+
+[node name="GroundFlat49" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -100, 0, -10)
+
+[node name="GroundHalfSlope22" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -100, -0.272571, 10)
+
+[node name="GroundHalfSlope52" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -100, -0.272571, -20)
+
+[node name="GroundHalfSlope71" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -100, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope72" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -90, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope73" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -80, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope74" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -70, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope75" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -61, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope76" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -51, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope77" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -43, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope78" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -34, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope79" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -25, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope80" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -15, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope81" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, -5, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope82" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 5, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope83" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 15, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope84" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 24, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope85" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 34, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope86" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 44, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope87" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 53, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope88" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 63, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope89" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 73, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope90" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 82, -0.0608473, -5.0972)
+
+[node name="GroundHalfSlope91" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, -6.83171e-09, 0.996942, 0.0781457, 8.71552e-08, 0.0781459, -0.996939, 89, -0.0608473, -5.0972)
+
+[node name="GroundShallowSlopeConnect19" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -100, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect49" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -100, -1.97357, -29.9983)
+
+[node name="GroundFlat50" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -90, 0, 0)
+
+[node name="GroundFlat51" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -90, 0, -10)
+
+[node name="GroundHalfSlope53" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -90, -0.272571, 10)
+
+[node name="GroundHalfSlope54" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -90, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect50" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -90, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect51" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -90, -1.97357, -29.9983)
+
+[node name="GroundFlat52" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -80, 0, 0)
+
+[node name="GroundFlat53" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -80, 0, -10)
+
+[node name="GroundHalfSlope55" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -80, -0.272571, 10)
+
+[node name="GroundHalfSlope56" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -80, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect52" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -80, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect53" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -80, -1.97357, -29.9983)
+
+[node name="GroundFlat54" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -70, 0, 0)
+
+[node name="GroundFlat55" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -70, 0, -10)
+
+[node name="GroundHalfSlope57" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -70, -0.272571, 10)
+
+[node name="GroundHalfSlope58" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -70, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect54" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -70, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect55" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -70, -1.97357, -29.9983)
+
+[node name="GroundFlat56" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -60, 0, 0)
+
+[node name="GroundFlat57" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -60, 0, -10)
+
+[node name="GroundHalfSlope59" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -60, -0.272571, 10)
+
+[node name="GroundHalfSlope60" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -60, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect56" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -60, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect57" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -60, -1.97357, -29.9983)
+
+[node name="GroundFlat58" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -50, 0, 0)
+
+[node name="GroundFlat59" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -50, 0, -10)
+
+[node name="GroundHalfSlope61" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -50, -0.272571, 10)
+
+[node name="GroundHalfSlope62" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -50, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect58" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -50, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect59" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -50, -1.97357, -29.9983)
+
+[node name="GroundFlat60" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -40, 0, 0)
+
+[node name="GroundFlat61" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -40, 0, -10)
+
+[node name="GroundHalfSlope63" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -40, -0.272571, 10)
+
+[node name="GroundHalfSlope64" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -40, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect60" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -40, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect61" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -40, -1.97357, -29.9983)
+
+[node name="GroundFlat62" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -30, 0, 0)
+
+[node name="GroundFlat63" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -30, 0, -10)
+
+[node name="GroundHalfSlope65" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -30, -0.272571, 10)
+
+[node name="GroundHalfSlope66" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -30, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect62" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -30, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect63" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -30, -1.97357, -29.9983)
+
+[node name="GroundFlat64" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -20, 0, 0)
+
+[node name="GroundFlat65" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -20, 0, -10)
+
+[node name="GroundHalfSlope67" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -20, -0.272571, 10)
+
+[node name="GroundHalfSlope68" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -20, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect64" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -20, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect65" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -20, -1.97357, -29.9983)
+
+[node name="GroundFlat66" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -10, 0, 0)
+
+[node name="GroundFlat67" parent="." instance=ExtResource("1_7cmlm")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -10, 0, -10)
+
+[node name="GroundHalfSlope69" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -10, -0.272571, 10)
+
+[node name="GroundHalfSlope70" parent="." instance=ExtResource("2_jhqhu")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -10, -0.272571, -20)
+
+[node name="GroundShallowSlopeConnect66" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, -10, -1.97357, 20)
+
+[node name="GroundShallowSlopeConnect67" parent="." instance=ExtResource("3_5qt2n")]
+transform = Transform3D(-0.999997, 0, -8.74225e-08, 0, 1, 0, 8.74225e-08, 0, -0.999997, -10, -1.97357, -29.9983)

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cfymnok4en21g"]
+
+[resource]
+resource_name = "795548"
+albedo_color = Color(0.473121, 0.33183, 0.2717, 1)
+roughness = 0.903922
+emission_enabled = true

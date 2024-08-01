@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://broy445xmju52"]
+
+[ext_resource type="Texture2D" uid="uid://dprhrah76x4tj" path="res://Assets/Enviroment/Vehicals/CarmetalCrunchy.jpg" id="1_c07ar"]
+
+[resource]
+resource_name = "CFD8DC"
+albedo_color = Color(0.815251, 0.848871, 0.865042, 1)
+albedo_texture = ExtResource("1_c07ar")
+roughness = 0.903922
+emission_enabled = true
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://bobihjqlb1qbn"]
-
-[resource]
-resource_name = "mat24"
-albedo_color = Color(0.921191, 0.949997, 0.940525, 0.482)
-metallic = 0.4
-roughness = 0.237915

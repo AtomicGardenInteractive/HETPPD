@@ -11,3 +11,11 @@ data = PackedVector3Array(0, -0.0006, 0, 0.0002, -0.0006, -0.0001, 0.0001, -0.00
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/Lantern/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_gal3c")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, -0.000226899, 1, 0, -1, -0.000226899, 0, 0.213, 0)
+light_color = Color(0.961258, 0.891718, 7.70092e-07, 1)
+light_energy = 9.566
+shadow_enabled = true
+spot_range = 2.63057
+spot_angle = 78.6333

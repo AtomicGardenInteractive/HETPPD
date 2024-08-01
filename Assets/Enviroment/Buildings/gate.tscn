@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://28xm5k2iw6eg"]
+
+[ext_resource type="PackedScene" uid="uid://b57ovdt068flf" path="res://Assets/Enviroment/Buildings/Gate.glb" id="1_d6uej"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rxne8"]
+size = Vector3(11.9502, 4.81012, 1)
+
+[node name="Gate" instance=ExtResource("1_d6uej")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Gate_mesh1" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gate_mesh1/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00927734, 2.43393, 0)
+shape = SubResource("BoxShape3D_rxne8")

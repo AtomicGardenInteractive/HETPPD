@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://7at1mt45oe8n"]
+
+[ext_resource type="Texture2D" uid="uid://cngyuaf0r1ddp" path="res://Assets/Enviroment/Scatter/GreenMetalCrunchy.jpg" id="1_skw6k"]
+
+[resource]
+resource_name = "mat16"
+albedo_texture = ExtResource("1_skw6k")
+metallic = 0.35
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
