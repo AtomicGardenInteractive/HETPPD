@@ -1,122 +1,55 @@
 shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, cull_disabled;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
 
-uniform sampler2D albedo_texture;
-uniform float albedo_amount = 1.0;
-uniform sampler2D normal_texture;
-uniform float normal_amount = 1.0;
-uniform sampler2D roughness_texture;
-uniform float roughness_amount = 1.0;
-uniform sampler2D ao_texture;
-uniform float ao_amount = 1.0;
-uniform sampler2D metal_texture;
-uniform float metal_amount = 1.0;
-uniform float specular_amount = 1.0;
-
-uniform sampler2D overlay_texture_01;
-uniform float overlay_amount_01 = 1.0;
-uniform float overlay_slide_speed_x_01 = 1.0;
-uniform float overlay_slide_speed_y_01 = 1.0;
-
-uniform sampler2D overlay_texture_02;
-uniform float overlay_amount_02 = 1.0;
-uniform float overlay_slide_speed_x_02 = 1.0;
-uniform float overlay_slide_speed_y_02 = 1.0;
-
-uniform sampler2D overlay_texture_03;
-uniform float overlay_amount_03 = 1.0;
-uniform float overlay_slide_speed_x_03 = 1.0;
-uniform float overlay_slide_speed_y_03 = 1.0;
-
-uniform sampler2D height_texture;
-uniform float height_amount = 1.0;
-
-uniform sampler2D normal_texture_02;
-uniform float normal_amount_02 = 1.0;
-uniform float normal_slide_speed_x_02 = 1.0;
-uniform float normal_slide_speed_y_02 = 1.0;
-
-uniform vec2 texture_scale = vec2(1.0, 1.0);
-uniform float slide_speed_x = 1.0;
-uniform float slide_speed_y = 1.0;
-uniform float wave_amplitude_x = 0.1;
-uniform float wave_frequency_x = 2.0;
-uniform float wave_speed_x = 1.0;
-uniform bool wave_direction_x = true; // true = upward, false = downward
-uniform float wave_amplitude_z = 0.1;
-uniform float wave_frequency_z = 2.0;
-uniform float wave_speed_z = 1.0;
-uniform bool wave_direction_z = true; // true = upward, false = downward
-uniform float overall_opacity = 1.0;
+uniform vec3 albedo : source_color;
+uniform sampler2D water_texture1;
+uniform sampler2D water_texture2;
+uniform sampler2D noise_texture;
+uniform vec2 scroll_speed1 = vec2(0.05, 0.0);
+uniform vec2 scroll_speed2 = vec2(-0.03, 0.0);
+uniform float blend_factor = 0.5;
+uniform vec2 scale1 = vec2(1.0, 1.0);
+uniform vec2 scale2 = vec2(1.0, 1.0);
+uniform float wave_strength = 1.0;
+uniform float wave_scale = 0.02;
+uniform int pixelation_level = 64;
+uniform float FoamSize = 0.5;
+uniform sampler2D DepthTexture : hint_depth_texture; 
+uniform float WaterOpacity = 1.0;
+uniform float FoamGlowIntensity = 0.5;
 
 void vertex() {
-    float wave_x = sin(VERTEX.x * wave_frequency_x + TIME * wave_speed_x) * wave_amplitude_x;
-    float wave_z = sin(VERTEX.z * wave_frequency_z + TIME * wave_speed_z) * wave_amplitude_z;
-
-    if (!wave_direction_x) {
-        wave_x = -wave_x;
-    }
-
-    if (!wave_direction_z) {
-        wave_z = -wave_z;
-    }
-
-    float height_value = texture(height_texture, UV).r * height_amount;
-    VERTEX.y += wave_x + wave_z + height_value;
-    VERTEX = vec3(VERTEX.x, VERTEX.y, VERTEX.z);
+    vec2 global_position = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xz;
+    float noise_value = texture(noise_texture, global_position * wave_scale).r;
+    float wave = sin(global_position.x * 0.2 + global_position.y * 0.2 + TIME + noise_value * 10.0) * wave_strength;
+    VERTEX.y += wave;
 }
 
 void fragment() {
-    vec2 uv = UV;
+    vec2 scaledUV1 = UV * scale1;
+    vec2 scaledUV2 = UV * scale2;
+    vec2 scrolledUV1 = scaledUV1 + scroll_speed1 * TIME;
+    vec2 scrolledUV2 = scaledUV2 + scroll_speed2 * TIME;
+    scrolledUV1 = mod(scrolledUV1, vec2(1.0, 1.0));
+    scrolledUV2 = mod(scrolledUV2, vec2(1.0, 1.0));
+    scrolledUV1 = floor(scrolledUV1 * float(pixelation_level)) / float(pixelation_level);
+    scrolledUV2 = floor(scrolledUV2 * float(pixelation_level)) / float(pixelation_level);
 
-    uv.x += TIME * slide_speed_x;
-    uv.y += TIME * slide_speed_y;
+    vec4 water_color1 = texture(water_texture1, scrolledUV1);
+    vec4 water_color2 = texture(water_texture2, scrolledUV2);
+    vec4 blended_water_color = mix(water_color1, water_color2, blend_factor);
 
-    vec2 overlay_uv_01 = UV;
-    overlay_uv_01.x += TIME * overlay_slide_speed_x_01;
-    overlay_uv_01.y += TIME * overlay_slide_speed_y_01;
-
-    vec2 overlay_uv_02 = UV;
-    overlay_uv_02.x += TIME * overlay_slide_speed_x_02;
-    overlay_uv_02.y += TIME * overlay_slide_speed_y_02;
-
-    vec2 overlay_uv_03 = UV;
-    overlay_uv_03.x += TIME * overlay_slide_speed_x_03;
-    overlay_uv_03.y += TIME * overlay_slide_speed_y_03;
-
-    vec2 normal_uv_02 = UV;
-    normal_uv_02.x += TIME * normal_slide_speed_x_02;
-    normal_uv_02.y += TIME * normal_slide_speed_y_02;
-
-    uv *= texture_scale;
-    overlay_uv_01 *= texture_scale;
-    overlay_uv_02 *= texture_scale;
-    overlay_uv_03 *= texture_scale;
-    normal_uv_02 *= texture_scale;
-
-    // Load and sample the textures
-    vec4 albedo_color = texture(albedo_texture, uv);
-    vec3 normal_color = texture(normal_texture, uv).rgb;
-    vec3 normal_color_02 = texture(normal_texture_02, normal_uv_02).rgb;
-    float roughness_value = texture(roughness_texture, uv).r;
-    float ao_value = texture(ao_texture, uv).r;
-    float metal_value = texture(metal_texture, uv).r;
-    vec4 overlay_color_01 = texture(overlay_texture_01, overlay_uv_01);
-    vec4 overlay_color_02 = texture(overlay_texture_02, overlay_uv_02);
-    vec4 overlay_color_03 = texture(overlay_texture_03, overlay_uv_03);
-
-    // Apply the textures
-    ALBEDO = mix(vec3(1.0), albedo_color.rgb, albedo_amount);
-    NORMAL = normalize(mix(vec3(0.5, 0.5, 1.0), normal_color * 2.0 - 1.0, normal_amount));
-    NORMAL = normalize(mix(NORMAL, normal_color_02 * 2.0 - 1.0, normal_amount_02));
-    ROUGHNESS = mix(0.5, roughness_value, roughness_amount);
-    AO = mix(1.0, ao_value, ao_amount);
-    METALLIC = mix(0.0, metal_value, metal_amount);
-    SPECULAR = specular_amount;
-    ALPHA = albedo_color.a * overall_opacity;
-
-    // Apply the overlay textures
-    ALBEDO = mix(ALBEDO, overlay_color_01.rgb, overlay_color_01.a * overlay_amount_01);
-    ALBEDO = mix(ALBEDO, overlay_color_02.rgb, overlay_color_02.a * overlay_amount_02);
-    ALBEDO = mix(ALBEDO, overlay_color_03.rgb, overlay_color_03.a * overlay_amount_03);
+    float depthValue = texture(DepthTexture, SCREEN_UV).r;
+    vec4 worldPosition = INV_PROJECTION_MATRIX * vec4(SCREEN_UV * 2.0 - 1.0, depthValue, 1.0);
+    worldPosition.xyz /= worldPosition.w;
+    float foamEffect = clamp(1.0 - smoothstep(worldPosition.z + FoamSize, worldPosition.z, VERTEX.z), 0.0, 1.0);
+    float foamOpacity = 1.0 - foamEffect;
+    float foamEffectRounded = round(foamOpacity);
+    float finalOpacity = foamEffectRounded + WaterOpacity;
+	
+    ALBEDO = blended_water_color.rgb * albedo;
+    ALPHA = finalOpacity;
+    EMISSION = vec3(foamEffectRounded) * FoamGlowIntensity;
+    METALLIC = 0.0;
+    ROUGHNESS = 1.0;
 }

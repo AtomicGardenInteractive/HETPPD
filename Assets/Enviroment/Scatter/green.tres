@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://gvlh6s8h15cn"]
+
+[ext_resource type="Texture2D" uid="uid://dprhrah76x4tj" path="res://Assets/Enviroment/Vehicals/CarmetalCrunchy.jpg" id="1_f4jhg"]
+
+[resource]
+resource_name = "green"
+albedo_color = Color(0.423583, 0.859696, 0.701411, 1)
+albedo_texture = ExtResource("1_f4jhg")
+metallic_specular = 0.0
+emission_enabled = true
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

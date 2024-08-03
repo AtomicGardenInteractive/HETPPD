@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgfioa1a3ont4"]
+
+[ext_resource type="PackedScene" uid="uid://ch6nqbj7gaws8" path="res://Assets/Enviroment/Scatter/Furrow.glb" id="1_kvgbb"]
+[ext_resource type="Material" uid="uid://bc7f648ufncu5" path="res://Assets/Enviroment/Scatter/FurrowDirt.tres" id="2_ol5re"]
+
+[node name="Furrow" instance=ExtResource("1_kvgbb")]
+
+[node name="Cube" parent="." index="0"]
+material_override = ExtResource("2_ol5re")

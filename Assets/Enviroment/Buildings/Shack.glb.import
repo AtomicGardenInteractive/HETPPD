@@ -1,0 +1,45 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ckaaqldt5f0l"
+path="res://.godot/imported/Shack.glb-0bc8378a159c20def8bc54b6339de12e.scn"
+
+[deps]
+
+source_file="res://Assets/Enviroment/Buildings/Shack.glb"
+dest_files=["res://.godot/imported/Shack.glb-0bc8378a159c20def8bc54b6339de12e.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Stone": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Buildings/Stone.tres"
+},
+"Wood": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Buildings/Wood.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

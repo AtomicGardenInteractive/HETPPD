@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cveaxwao7rukn"]
+
+[ext_resource type="Texture2D" uid="uid://bkc108p1icn2w" path="res://Assets/Enviroment/Buildings/House_texture.jpg" id="1_awcot"]
+
+[resource]
+resource_name = "Texture-base.014"
+albedo_color = Color(0.699653, 0.699653, 0.699653, 1)
+albedo_texture = ExtResource("1_awcot")
+metallic_specular = 0.0
+uv1_world_triplanar = true
+texture_filter = 2

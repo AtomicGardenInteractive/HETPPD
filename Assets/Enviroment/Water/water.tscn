@@ -1,27 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://ogjq1mamcde4"]
+[gd_scene load_steps=3 format=3 uid="uid://ogjq1mamcde4"]
 
-[ext_resource type="Material" uid="uid://ythgis0cf6u" path="res://Assets/Enviroment/Water/Water.tres" id="1_jxw2k"]
 [ext_resource type="Material" uid="uid://bvr554gml04n2" path="res://Assets/Shaders/Water.tres" id="2_wk738"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_sr032"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wod8j"]
-data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+[sub_resource type="PlaneMesh" id="PlaneMesh_xxv1w"]
+material = ExtResource("2_wk738")
+size = Vector2(500, 500)
+subdivide_width = 100
+subdivide_depth = 100
 
 [node name="Water" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
-material_override = ExtResource("1_jxw2k")
-mesh = SubResource("PlaneMesh_sr032")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.97733, 0, 99.9805, 0, 100, 0, -99.9805, 0, 1.97733, 0, -0.298195, 0)
-material_override = ExtResource("2_wk738")
-mesh = SubResource("PlaneMesh_sr032")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
-transform = Transform3D(0.0197733, 0, -0.999804, 0, 1, 0, 0.999804, 0, 0.0197733, 0, 0.00298195, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_wod8j")
+mesh = SubResource("PlaneMesh_xxv1w")

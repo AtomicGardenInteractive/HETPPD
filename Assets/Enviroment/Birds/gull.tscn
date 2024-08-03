@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://ch4l35amny0a"]
+
+[ext_resource type="PackedScene" uid="uid://wt36t34cpavy" path="res://Assets/Enviroment/Birds/Gull.glb" id="1_4xfih"]
+[ext_resource type="Material" uid="uid://bp8j1adju5k16" path="res://Assets/Enviroment/Birds/gull.tres" id="2_2dbe5"]
+
+[sub_resource type="Animation" id="Animation_w5qxq"]
+resource_name = "Spin"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_iusjx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ii411"]
+_data = {
+"RESET": SubResource("Animation_iusjx"),
+"Spin": SubResource("Animation_w5qxq")
+}
+
+[node name="Gull" instance=ExtResource("1_4xfih")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(0.535194, 0.184282, -0.492044, -0.244176, 0.709139, 0, 0.465237, 0.160194, 0.566032, -37.0627, 0, -37.5876)
+material_override = ExtResource("2_2dbe5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_ii411")
+}
+autoplay = "Spin"

@@ -6,6 +6,7 @@
 transparency = 1
 albedo_color = Color(1, 1, 1, 0.235294)
 albedo_texture = ExtResource("1_qkoes")
+metallic_specular = 0.0
 roughness = 0.0
 heightmap_flip_texture = true
 subsurf_scatter_strength = 0.96

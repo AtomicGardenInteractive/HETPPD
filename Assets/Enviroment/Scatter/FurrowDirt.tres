@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bc7f648ufncu5"]
+
+[ext_resource type="Texture2D" uid="uid://che54s2ga3ij7" path="res://Assets/Enviroment/Scatter/FurrowDirtCrunchy.jpg" id="1_i3d7m"]
+
+[resource]
+albedo_color = Color(0.847474, 0.847474, 0.847474, 1)
+albedo_texture = ExtResource("1_i3d7m")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.4, 0.4, 0.4)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

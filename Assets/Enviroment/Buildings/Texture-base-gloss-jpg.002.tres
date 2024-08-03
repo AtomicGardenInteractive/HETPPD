@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://biwee4jfjyc3c"]
+
+[ext_resource type="Texture2D" uid="uid://bkc108p1icn2w" path="res://Assets/Enviroment/Buildings/House_texture.jpg" id="1_6o5eh"]
+
+[resource]
+resource_name = "Texture-base-gloss-jpg.002"
+albedo_color = Color(1, 1, 1, 1)
+albedo_texture = ExtResource("1_6o5eh")
+metallic = 0.4
+roughness = 0.459697

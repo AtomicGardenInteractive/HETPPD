@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdyen25br60xy"]
+
+[ext_resource type="PackedScene" uid="uid://dc6lb4ww08tf2" path="res://Assets/Enviroment/Scatter/Carrot.glb" id="1_nivlt"]
+
+[node name="Carrot" instance=ExtResource("1_nivlt")]

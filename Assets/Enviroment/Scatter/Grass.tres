@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cohrvlwiikgbr"]
+
+[ext_resource type="Texture2D" uid="uid://bqm2kec3g2876" path="res://Assets/Enviroment/Scatter/GrassCrunchy.jpg" id="1_3bntl"]
+
+[resource]
+albedo_texture = ExtResource("1_3bntl")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.32, 0.32, 0.32)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

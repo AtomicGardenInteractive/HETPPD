@@ -1,38 +1,24 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bvr554gml04n2"]
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://bvr554gml04n2"]
 
 [ext_resource type="Shader" path="res://Assets/Shaders/Water.gdshader" id="1_42odp"]
+[ext_resource type="Texture2D" uid="uid://b4dog8t6ysm6m" path="res://Assets/Shaders/PerlinNoise.png" id="2_xqey1"]
+[ext_resource type="Texture2D" uid="uid://ch3bu1ivm5naf" path="res://Assets/Enviroment/Water/WaterCrunched.jpg" id="3_7v6fn"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_42odp")
-shader_parameter/albedo_amount = 1.0
-shader_parameter/normal_amount = 1.0
-shader_parameter/roughness_amount = 1.0
-shader_parameter/ao_amount = 1.0
-shader_parameter/metal_amount = 1.0
-shader_parameter/specular_amount = 1.0
-shader_parameter/overlay_amount_01 = 1.0
-shader_parameter/overlay_slide_speed_x_01 = 1.0
-shader_parameter/overlay_slide_speed_y_01 = 1.0
-shader_parameter/overlay_amount_02 = 1.0
-shader_parameter/overlay_slide_speed_x_02 = 1.0
-shader_parameter/overlay_slide_speed_y_02 = 1.0
-shader_parameter/overlay_amount_03 = 1.0
-shader_parameter/overlay_slide_speed_x_03 = 1.0
-shader_parameter/overlay_slide_speed_y_03 = 1.0
-shader_parameter/height_amount = 1.0
-shader_parameter/normal_amount_02 = 1.0
-shader_parameter/normal_slide_speed_x_02 = 1.0
-shader_parameter/normal_slide_speed_y_02 = 1.0
-shader_parameter/texture_scale = Vector2(1, 1)
-shader_parameter/slide_speed_x = 1.0
-shader_parameter/slide_speed_y = 1.0
-shader_parameter/wave_amplitude_x = 0.1
-shader_parameter/wave_frequency_x = 2.0
-shader_parameter/wave_speed_x = 1.0
-shader_parameter/wave_direction_x = true
-shader_parameter/wave_amplitude_z = 0.1
-shader_parameter/wave_frequency_z = 2.0
-shader_parameter/wave_speed_z = 1.0
-shader_parameter/wave_direction_z = true
-shader_parameter/overall_opacity = 1.0
+shader_parameter/albedo = Color(1.20327e-07, 0.262177, 0.381066, 1)
+shader_parameter/scroll_speed1 = Vector2(0.05, 0)
+shader_parameter/scroll_speed2 = Vector2(-0.03, 0)
+shader_parameter/blend_factor = 0.5
+shader_parameter/scale1 = Vector2(10, 10)
+shader_parameter/scale2 = Vector2(100, 100)
+shader_parameter/wave_strength = 0.53
+shader_parameter/wave_scale = 0.02
+shader_parameter/pixelation_level = 64
+shader_parameter/FoamSize = 0.38
+shader_parameter/WaterOpacity = 0.99
+shader_parameter/FoamGlowIntensity = 0.5
+shader_parameter/water_texture1 = ExtResource("3_7v6fn")
+shader_parameter/water_texture2 = ExtResource("2_xqey1")
+shader_parameter/noise_texture = ExtResource("2_xqey1")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Levels/start_menu_level.gd" id="1_mf6wx"]
 [ext_resource type="PackedScene" uid="uid://dja7a8xd0hgck" path="res://Scenes/Interface/main_menu_ui.tscn" id="2_n7pll"]
-[ext_resource type="PackedScene" uid="uid://cu5jdvoti0265" path="res://sketchfab_scene.tscn" id="2_x0pco"]
+[ext_resource type="PackedScene" uid="uid://cvr0bh7w38e8l" path="res://Assets/Plane/scene.gltf" id="2_x0pco"]
 [ext_resource type="PackedScene" uid="uid://d1cwyogxoaxfe" path="res://Scenes/Interface/radio.tscn" id="3_567d0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qbkep"]
