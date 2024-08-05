@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnb7c0u218w7y"]
+[gd_scene load_steps=7 format=3 uid="uid://cnb7c0u218w7y"]
 
-[ext_resource type="PackedScene" uid="uid://cmo42jtxgnew6" path="res://Scenes/Levels/level.tscn" id="1_fmyhb"]
 [ext_resource type="Script" path="res://Scenes/game_handler.gd" id="1_lt1um"]
 [ext_resource type="PackedScene" uid="uid://bs7u4vh0a6sqg" path="res://Scenes/Player/player.tscn" id="2_ia1on"]
 [ext_resource type="PackedScene" uid="uid://cdh6u6wmw0les" path="res://Scenes/Levels/start_menu_level.tscn" id="4_hmv8y"]
@@ -34,8 +33,6 @@ game_handler = NodePath("../../..")
 
 [node name="Level_Handler" type="Node" parent="."]
 process_mode = 1
-
-[node name="Level" parent="Level_Handler" instance=ExtResource("1_fmyhb")]
 
 [node name="Player" parent="Level_Handler" instance=ExtResource("2_ia1on")]
 

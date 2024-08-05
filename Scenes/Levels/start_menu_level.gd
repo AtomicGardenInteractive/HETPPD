@@ -7,9 +7,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$AnimationPlayer.animation_finished
-	$AnimationPlayer.play("CameraTransition")
-	$AnimationPlayer.animation_finished
-	$RadioLayer.visible
-	$RadioLayer/Radio.main_menu_anim
+	#$AnimationPlayer.animation_finished
+	#$AnimationPlayer.play("CameraTransition")
+	#$AnimationPlayer.animation_finished
+	#$RadioLayer.visible
+	#$RadioLayer/Radio.main_menu_anim
 	pass

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjenpcchhy4kk"]
+
+[resource]
+resource_name = "Bag"
+albedo_color = Color(0.517538, 0.462605, 0.354327, 1)
+metallic = 0.4
+roughness = 0.415087

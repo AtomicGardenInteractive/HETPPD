@@ -1,11 +1,13 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ccliftv2gri4p"]
 
-[ext_resource type="Texture2D" uid="uid://druq2xmr6p4jn" path="res://Assets/Enviroment/Buildings/StonebrickCrunchy.jpg" id="1_8hj87"]
+[ext_resource type="Texture2D" uid="uid://druq2xmr6p4jn" path="res://Assets/Enviroment/Buildings/StonebrickCrunchy.jpg" id="1_1lk7m"]
 
 [resource]
 resource_name = "Stone"
 albedo_color = Color(0.5315, 0.533321, 0.50152, 1)
-albedo_texture = ExtResource("1_8hj87")
+albedo_texture = ExtResource("1_1lk7m")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 uv1_world_triplanar = true
 texture_filter = 2

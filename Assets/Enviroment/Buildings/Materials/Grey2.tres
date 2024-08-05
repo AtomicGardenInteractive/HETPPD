@@ -1,11 +1,11 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://kscbhc7vjyjy"]
 
-[ext_resource type="Texture2D" uid="uid://c4r4ku7s7faj3" path="res://Assets/Enviroment/Buildings/WoodCrunchy.jpg" id="1_myq3a"]
+[ext_resource type="Texture2D" uid="uid://c4r4ku7s7faj3" path="res://Assets/Enviroment/Buildings/WoodCrunchy.jpg" id="1_c5rqe"]
 
 [resource]
 resource_name = "Grey2"
-albedo_color = Color(0.885986, 0.605745, 0.466893, 1)
-albedo_texture = ExtResource("1_myq3a")
+albedo_color = Color(0.896776, 0.628393, 0.496041, 1)
+albedo_texture = ExtResource("1_c5rqe")
 metallic = 0.4
 roughness = 0.415087
 uv1_scale = Vector3(0.58, 0.58, 0.58)

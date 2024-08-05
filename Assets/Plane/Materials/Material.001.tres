@@ -7,5 +7,6 @@
 resource_name = "Material.001"
 cull_mode = 2
 albedo_texture = ExtResource("1_mou2x")
+metallic_specular = 0.0
 normal_enabled = true
 normal_texture = ExtResource("2_ye7pk")

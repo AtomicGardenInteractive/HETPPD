@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cyf66gu1jihp4"]
+
+[resource]
+resource_name = "F44336"
+albedo_color = Color(0.959346, 0.2478, 0.189748, 1)
+roughness = 0.903922
+emission_enabled = true

@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cud8pjnn383pd"]
+
+[ext_resource type="Texture2D" uid="uid://cecoy7p3xmho7" path="res://Assets/Enviroment/Buildings/RoofingTile.jpg" id="1_wt621"]
+
+[resource]
+resource_name = "Main"
+albedo_color = Color(0.513233, 0.513233, 0.513233, 1)
+albedo_texture = ExtResource("1_wt621")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d4mp8426lbirh"]
+
+[resource]
+resource_name = "Wood_Light"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.499314, 0.335813, 0.195599, 1)
+metallic = 0.4
+roughness = 0.415087

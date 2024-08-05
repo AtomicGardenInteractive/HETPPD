@@ -1,0 +1,65 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bhjegxvc53noq"
+path="res://.godot/imported/Fantasy Inn.glb-0003c8d2bd8fab77855e0df572e42719.scn"
+
+[deps]
+
+source_file="res://Assets/Enviroment/Buildings/Fantasy Inn.glb"
+dest_files=["res://.godot/imported/Fantasy Inn.glb-0003c8d2bd8fab77855e0df572e42719.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Plaster": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Buildings/Plaster.tres"
+},
+"RoofTiles_Red": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Buildings/RoofTiles_Red.tres"
+},
+"Stone_Dark": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Buildings/Stone_Dark.tres"
+},
+"Stone_Light": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Buildings/Stone_Light.tres"
+},
+"Windows": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Buildings/Windows.tres"
+},
+"Wood": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Buildings/Wood.tres"
+},
+"Wood_Light": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Enviroment/Buildings/Wood_Light.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

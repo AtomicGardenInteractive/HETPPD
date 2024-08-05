@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://myjvq4ov8y30"]
+
+[resource]
+resource_name = "RoofTiles_Red"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.377815, 0.157637, 0.113559, 1)
+metallic = 0.4
+roughness = 0.415087

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://df66b2dxhdxl7"]
+
+[resource]
+resource_name = "Stone_Dark"
+albedo_color = Color(0.386736, 0.418467, 0.462864, 1)
+metallic = 0.4
+roughness = 0.415087

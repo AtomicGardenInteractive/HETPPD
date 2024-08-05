@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://obo45rcquevs"]
+
+[ext_resource type="PackedScene" uid="uid://b3vjiwt6xiv3x" path="res://Assets/Enviroment/Scatter/Cabbage.glb" id="1_svo1m"]
+
+[node name="Cabbage" instance=ExtResource("1_svo1m")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)

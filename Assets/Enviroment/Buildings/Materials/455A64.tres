@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://62wb77xfwj22"]
+
+[resource]
+resource_name = "455A64"
+albedo_color = Color(0.2717, 0.34919, 0.395881, 1)
+roughness = 0.903922
+emission_enabled = true

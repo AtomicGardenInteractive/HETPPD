@@ -1,11 +1,11 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://5kadl772y4wj"]
 
-[ext_resource type="Texture2D" uid="uid://cqhk0pp56524b" path="res://Assets/Enviroment/Scatter/GreenMetalCrunchy - Copy.jpg" id="1_t24bw"]
+[ext_resource type="Texture2D" uid="uid://cqhk0pp56524b" path="res://Assets/Enviroment/Scatter/GreenMetalCrunchy - Copy.jpg" id="1_eea8w"]
 
 [resource]
 resource_name = "Grey"
 albedo_color = Color(0.874597, 0.384349, 0.360342, 1)
-albedo_texture = ExtResource("1_t24bw")
+albedo_texture = ExtResource("1_eea8w")
 metallic_specular = 0.0
 uv1_scale = Vector3(0.475, 0.475, 0.475)
 uv1_triplanar = true

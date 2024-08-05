@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c53ihb03wtych"]
+
+[ext_resource type="PackedScene" uid="uid://yf0yv0vrcy37" path="res://Assets/Enviroment/Scatter/Sheeps.tscn" id="1_30rgx"]
+
+[node name="SheepWalking" instance=ExtResource("1_30rgx")]

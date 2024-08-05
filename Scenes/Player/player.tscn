@@ -1,30 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bs7u4vh0a6sqg"]
+[gd_scene load_steps=4 format=3 uid="uid://bs7u4vh0a6sqg"]
 
-[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_2h4k3"]
 [ext_resource type="Script" path="res://addons/addons/ultimate_character/ucharacterbody3d.gd" id="1_fmlr3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pxwdu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5io2p"]
 height = 1.3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j06oy"]
-albedo_color = Color(0, 1, 1, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_sb4nr"]
-material = SubResource("StandardMaterial3D_j06oy")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lech4"]
-albedo_color = Color(1, 0, 1, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_4fl4d"]
-material = SubResource("StandardMaterial3D_lech4")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mb4i6"]
-albedo_color = Color(1, 1, 0, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_pxsxp"]
-material = SubResource("StandardMaterial3D_mb4i6")
 
 [node name="UCharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_fmlr3")
@@ -43,24 +24,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 
 [node name="Camera" type="Camera3D" parent="Head"]
 
+[node name="Equipment" type="Node3D" parent="Head/Camera"]
+
 [node name="AudioListener3D" type="AudioListener3D" parent="Head"]
-
-[node name="Equipment" type="Node3D" parent="Head"]
-
-[node name="EquipmentMeshA" type="MeshInstance3D" parent="Head/Equipment"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.544212, -0.351969, -0.610191)
-mesh = SubResource("CapsuleMesh_sb4nr")
-
-[node name="EquipmentMeshB" type="MeshInstance3D" parent="Head/Equipment"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.544212, -0.351969, -0.610191)
-mesh = SubResource("CapsuleMesh_4fl4d")
-
-[node name="EquipmentMeshC" type="MeshInstance3D" parent="Head/Equipment"]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.544212, -0.351969, -0.610191)
-mesh = SubResource("CapsuleMesh_pxsxp")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 2, 0)
-
-[node name="Player" type="Node" parent="."]
-script = ExtResource("1_2h4k3")

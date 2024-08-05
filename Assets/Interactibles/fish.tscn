@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkvuke2mnghqd"]
+
+[ext_resource type="PackedScene" uid="uid://cokeb2f8d2aou" path="res://Assets/Interactibles/Fish.glb" id="1_8r1ch"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2qfru"]
+radius = 17.8237
+height = 88.7284
+
+[node name="Fish" instance=ExtResource("1_8r1ch")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.0231235, -0.999733, 0, 0.999733, 0.0231235, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_2qfru")

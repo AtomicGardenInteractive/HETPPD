@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://8sh0sxqildax"]
+
+[ext_resource type="Texture2D" uid="uid://cl5uhx677iq6m" path="res://Assets/Enviroment/Buildings/PlasterCrunchy.jpg" id="1_phrfc"]
+
+[resource]
+resource_name = "Walls"
+albedo_color = Color(0.690956, 0.693322, 0.651981, 1)
+albedo_texture = ExtResource("1_phrfc")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
