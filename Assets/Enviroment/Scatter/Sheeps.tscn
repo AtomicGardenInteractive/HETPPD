@@ -10,9 +10,7 @@ height = 7.37544
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
 [node name="Skeleton3D" parent="RootNode/Armature" index="0"]
-bones/0/scale = Vector3(1, 1, 1)
 bones/1/rotation = Quaternion(0.707107, -7.05258e-07, -7.05258e-07, 0.707107)
-bones/1/scale = Vector3(1, 1, 1)
 bones/4/rotation = Quaternion(0.00175922, -0.0017595, 0.707105, 0.707105)
 bones/4/scale = Vector3(1, 1, 1)
 bones/5/rotation = Quaternion(0.706397, -0.70057, -0.0570033, 0.0833999)
@@ -36,7 +34,6 @@ bones/17/scale = Vector3(1, 1, 1)
 bones/18/rotation = Quaternion(-0.416861, -0.00863763, -0.00396161, 0.908921)
 bones/18/scale = Vector3(1, 1, 1)
 bones/20/rotation = Quaternion(0.601259, 0.0228935, -0.00592349, 0.798704)
-bones/20/scale = Vector3(1, 1, 1)
 bones/22/rotation = Quaternion(0.00658662, 0.914641, 0.403459, -0.0246981)
 bones/22/scale = Vector3(1, 1, 1)
 bones/23/scale = Vector3(1, 1, 1)
@@ -46,9 +43,6 @@ bones/26/rotation = Quaternion(3.45278e-06, 0.694421, 0.719569, 3.32978e-06)
 bones/27/rotation = Quaternion(0.065167, 0.000300588, -0.0294651, 0.997439)
 bones/27/scale = Vector3(1, 1, 1)
 bones/29/rotation = Quaternion(0.707107, -7.05258e-07, -7.05258e-07, 0.707107)
-bones/29/scale = Vector3(1, 1, 1)
-bones/31/scale = Vector3(1, 1, 1)
-bones/33/scale = Vector3(1, 1, 1)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="RootNode" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.000890092, -1, 0, 1, 0.000890092, 0, 2.76698, 0.27106)

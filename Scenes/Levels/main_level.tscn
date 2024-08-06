@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://3ikss5hb1chi"]
+[gd_scene load_steps=56 format=3 uid="uid://3ikss5hb1chi"]
 
 [ext_resource type="Material" uid="uid://dkdhmjnlcaah6" path="res://Assets/Shaders/Sky.tres" id="1_6aq32"]
 [ext_resource type="PackedScene" uid="uid://bxgkepgoxk5vh" path="res://Assets/Enviroment/Ground/Beach/ground_flat.tscn" id="1_gghbu"]
@@ -51,6 +51,7 @@
 [ext_resource type="PackedScene" uid="uid://dkvuke2mnghqd" path="res://Assets/Interactibles/fish.tscn" id="49_m84nr"]
 [ext_resource type="PackedScene" uid="uid://obo45rcquevs" path="res://Assets/Enviroment/Scatter/cabbage.tscn" id="50_feuyc"]
 [ext_resource type="PackedScene" uid="uid://yf0yv0vrcy37" path="res://Assets/Enviroment/Scatter/Sheeps.tscn" id="51_8osdg"]
+[ext_resource type="PackedScene" uid="uid://qj2tt1msrj8d" path="res://Assets/Interactibles/Simple Pickaxe.glb" id="52_mqr6s"]
 
 [sub_resource type="Sky" id="Sky_qybjr"]
 sky_material = ExtResource("1_6aq32")
@@ -2441,6 +2442,12 @@ transform = Transform3D(0.116615, 0, -1.24455, 0, 1.25, 0, 1.24455, 0, 0.116615,
 [node name="House2" parent="Village/Buildings" instance=ExtResource("24_174tm")]
 transform = Transform3D(-1.24978, 0, 0.0234513, 0, 1.25, 0, -0.0234513, 0, -1.24978, 225.023, 16.4745, -121.28)
 
+[node name="Wall" parent="Village/Buildings" instance=ExtResource("21_dme4k")]
+transform = Transform3D(-0.0121122, 0, 0.999927, 0, 1, 0, -0.999927, 0, -0.0121122, 255.782, 18.5157, -212.623)
+
+[node name="Wall2" parent="Village/Buildings" instance=ExtResource("21_dme4k")]
+transform = Transform3D(-0.0120807, -0.0720893, 0.997325, -0.000873164, 0.997398, 0.072084, -0.999927, 0, -0.0121122, 238.724, 17.8891, -212.623)
+
 [node name="Cliffs" type="Node3D" parent="Village"]
 metadata/_edit_lock_ = true
 
@@ -3318,5 +3325,11 @@ transform = Transform3D(0.000453662, 0.00837808, -0.0202726, 0.00145282, 0.02173
 [node name="Fish2" parent="Interactables" instance=ExtResource("49_m84nr")]
 transform = Transform3D(0.0272905, -0.00329346, -0.0290583, 0.0014655, 0.0398496, -0.00314021, 0.0292076, 0.00107782, 0.0273085, 243.446, 16.3577, -137.039)
 
+[node name="Gate" parent="Interactables" instance=ExtResource("23_ydjlm")]
+transform = Transform3D(0.402516, 0, 0, 0, 0.371025, 0, 0, 0, 0.5, 247.26, 17.6094, -212.597)
+
 [node name="Player" parent="." instance=ExtResource("6_m1hp7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196.663, 17.9603, -125.769)
+
+[node name="Simple Pickaxe" parent="." instance=ExtResource("52_mqr6s")]
+transform = Transform3D(1, 0, 0, 0, 0.105743, 0.994393, 0, -0.994393, 0.105743, 13.7108, 1.22948, -3.64683)

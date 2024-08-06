@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5ypsul3ss18t"
-path.s3tc="res://.godot/imported/Woodnoplankscrunchy.jpg-ffe6ab40ca031702f6db0f1f7e114e1d.s3tc.ctex"
+uid="uid://blfrxrbmoiah4"
+path.s3tc="res://.godot/imported/MetalCrunchy.jpg-2bd6c083d84edf11b3d933e463c3eb7e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Enviroment/Ground/Farm/Woodnoplankscrunchy.jpg"
-dest_files=["res://.godot/imported/Woodnoplankscrunchy.jpg-ffe6ab40ca031702f6db0f1f7e114e1d.s3tc.ctex"]
+source_file="res://Assets/Interactibles/MetalCrunchy.jpg"
+dest_files=["res://.godot/imported/MetalCrunchy.jpg-2bd6c083d84edf11b3d933e463c3eb7e.s3tc.ctex"]
 
 [params]
 

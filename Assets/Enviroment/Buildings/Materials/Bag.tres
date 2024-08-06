@@ -3,5 +3,5 @@
 [resource]
 resource_name = "Bag"
 albedo_color = Color(0.517538, 0.462605, 0.354327, 1)
-metallic = 0.4
+metallic_specular = 0.0
 roughness = 0.415087

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://chl2t513w2rrm"]
+
+[ext_resource type="Texture2D" uid="uid://5ypsul3ss18t" path="res://Assets/Enviroment/Ground/Farm/Woodnoplankscrunchy.jpg" id="1_682wf"]
+
+[resource]
+resource_name = "mat19"
+albedo_color = Color(0.875606, 0.609712, 0.2717, 1)
+albedo_texture = ExtResource("1_682wf")
+emission_enabled = true
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

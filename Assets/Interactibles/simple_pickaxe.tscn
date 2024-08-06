@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://paglrjvgvlvo"]
+
+[ext_resource type="PackedScene" uid="uid://qj2tt1msrj8d" path="res://Assets/Interactibles/Simple Pickaxe.glb" id="1_5gtrx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k163p"]
+
+[node name="Simple Pickaxe" instance=ExtResource("1_5gtrx")]
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+shape = SubResource("CapsuleShape3D_k163p")
