@@ -1,6 +1,7 @@
 extends Control
 
 @export var mainmenuscene : Node3D
+@onready var radiolayer: CanvasLayer = $"../../RadioLayer"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +14,8 @@ func _process(delta):
 
 
 func _on_play_pressed():
-	$"../../AnimationPlayer".play("Start Game")
+	radiolayer.visible = true
+	self.visible = false
 	pass # Replace with function body.
 
 

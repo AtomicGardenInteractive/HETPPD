@@ -31,6 +31,7 @@ func switch_menu():
 
 func _on_resume_pressed():
 	game_handler.game_paused = false
+	game_handler.show_mouse()
 
 
 func _on_quit_pressed():

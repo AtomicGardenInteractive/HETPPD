@@ -5,9 +5,9 @@ class_name GameHandler
 signal toggle_game_paused(is_paused : bool)
 
 @export var pause_menu: Control
-#@export var load_menu: Control
 @export var options_menu: Control
 @export var HUD: Control
+var in_main_menu: bool = true
 
 var game_paused: bool = false:
 	get:
@@ -18,7 +18,7 @@ var game_paused: bool = false:
 		emit_signal("toggle_game_paused", game_paused)
 
 func _input(event: InputEvent):
-	if(event.is_action_pressed("pause_menu")):
+	if(event.is_action_pressed("pause_menu")) and in_main_menu == false:
 		game_paused = !game_paused
 		show_mouse()
 
@@ -35,4 +35,4 @@ func show_mouse():
 	if game_paused:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ctrb5vn30k7yl"]
+
+[ext_resource type="Texture2D" uid="uid://blwwcfj78dap4" path="res://Assets/Character/fabric.jpg" id="1_6mk85"]
+
+[resource]
+resource_name = "Swat_Black"
+albedo_color = Color(0.433462, 0.412376, 0.39131, 1)
+albedo_texture = ExtResource("1_6mk85")
+metallic_specular = 0.0
+uv1_scale = Vector3(353.035, 353.035, 353.035)
+uv1_triplanar = true
+texture_filter = 2

@@ -1,6 +1,5 @@
-[gd_scene load_steps=56 format=3 uid="uid://3ikss5hb1chi"]
+[gd_scene load_steps=58 format=3 uid="uid://3ikss5hb1chi"]
 
-[ext_resource type="Material" uid="uid://dkdhmjnlcaah6" path="res://Assets/Shaders/Sky.tres" id="1_6aq32"]
 [ext_resource type="PackedScene" uid="uid://bxgkepgoxk5vh" path="res://Assets/Enviroment/Ground/Beach/ground_flat.tscn" id="1_gghbu"]
 [ext_resource type="PackedScene" uid="uid://dgftuvi7l5djj" path="res://Assets/Enviroment/Ground/Beach/ground_half_slope.tscn" id="2_dtm7l"]
 [ext_resource type="PackedScene" uid="uid://bks44g7bb56d1" path="res://Assets/Enviroment/Ground/Beach/ground_shallow_slope.tscn" id="3_7lg3s"]
@@ -48,50 +47,127 @@
 [ext_resource type="PackedScene" uid="uid://dpw5dap1tqka2" path="res://Assets/Enviroment/Buildings/Scenes/black_smith.tscn" id="46_5mxb2"]
 [ext_resource type="PackedScene" uid="uid://b6d0sowt5nnpw" path="res://Assets/Enviroment/Buildings/Scenes/lighthouse.tscn" id="47_r4v0l"]
 [ext_resource type="PackedScene" uid="uid://t1vkspq4v3h5" path="res://Assets/Enviroment/Scatter/path.tscn" id="48_8gt73"]
-[ext_resource type="PackedScene" uid="uid://dkvuke2mnghqd" path="res://Assets/Interactibles/fish.tscn" id="49_m84nr"]
+[ext_resource type="Script" path="res://Scenes/Levels/Interactables.gd" id="50_ccqal"]
 [ext_resource type="PackedScene" uid="uid://obo45rcquevs" path="res://Assets/Enviroment/Scatter/cabbage.tscn" id="50_feuyc"]
+[ext_resource type="PackedScene" uid="uid://barxapqvxbvey" path="res://Assets/Interactibles/pickup_Fish.tscn" id="50_hptkr"]
 [ext_resource type="PackedScene" uid="uid://yf0yv0vrcy37" path="res://Assets/Enviroment/Scatter/Sheeps.tscn" id="51_8osdg"]
-[ext_resource type="PackedScene" uid="uid://qj2tt1msrj8d" path="res://Assets/Interactibles/Simple Pickaxe.glb" id="52_mqr6s"]
+[ext_resource type="PackedScene" uid="uid://cg82ev4q2whgd" path="res://Assets/Interactibles/pickup_pickaxe.tscn" id="51_h83hr"]
+[ext_resource type="PackedScene" uid="uid://bmvgnsh482wms" path="res://Scenes/Objects/walls.tscn" id="53_sqjyu"]
 
-[sub_resource type="Sky" id="Sky_qybjr"]
-sky_material = ExtResource("1_6aq32")
+[sub_resource type="Animation" id="Animation_5mdsh"]
+resource_name = "TruckMove"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Truck:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(75.358, 11.2109, -70.0749), Vector3(77.0553, 11.2109, -75.1054)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Truck:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0411668, 1.54402, -0.0233263), Vector3(0.0411668, 2.00433, -0.0233263)]
+}
 
-[sub_resource type="Environment" id="Environment_q64fx"]
-background_mode = 2
-sky = SubResource("Sky_qybjr")
-ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
-fog_enabled = true
-fog_light_color = Color(0.176969, 0.286984, 0.344069, 1)
-fog_sky_affect = 0.55
-volumetric_fog_length = 3.17
+[sub_resource type="Animation" id="Animation_wrmns"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Truck:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(75.358, 11.2109, -70.0749)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Truck:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0411668, 1.54402, -0.0233263)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Gate:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(247.26, 17.6094, -212.597)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Gate:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_viton"]
-exposure_multiplier = 2.0
-dof_blur_far_transition = 1000.0
+[sub_resource type="Animation" id="Animation_s02tt"]
+resource_name = "GateMove"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gate:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(247.26, 17.6094, -212.597), Vector3(246.041, 17.6094, -214.554)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gate:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.10624, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nt6ux"]
+_data = {
+"GateMove": SubResource("Animation_s02tt"),
+"RESET": SubResource("Animation_wrmns"),
+"TruckMove": SubResource("Animation_5mdsh")
+}
 
 [node name="main_level" type="Node3D"]
-
-[node name="World" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
-environment = SubResource("Environment_q64fx")
-camera_attributes = SubResource("CameraAttributesPractical_viton")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
-transform = Transform3D(0.942792, 0.235658, -0.235815, 0.0400582, -0.782294, -0.62162, -0.330967, 0.576612, -0.74698, 0, 0, 0)
-light_color = Color(0, 0, 0, 1)
-light_energy = 0.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-shadow_enabled = true
-sky_mode = 2
-
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="World"]
-transform = Transform3D(0.610239, 0.0346175, 0.791461, -0.525139, 0.765693, 0.371407, -0.593159, -0.642274, 0.485435, 0, 0, 0)
-light_color = Color(0.950128, 0.985498, 0.999013, 1)
-light_energy = 0.25
-shadow_enabled = true
 
 [node name="Beach" type="Node3D" parent="."]
 
@@ -3286,52 +3362,79 @@ transform = Transform3D(2.34347, 0.136272, 0.299203, -0.287825, 0.976097, -0.168
 [node name="SeaweedBank5" parent="LightHouse/Scatter" instance=ExtResource("17_b0cp1")]
 transform = Transform3D(1.08451, -0.325536, -1.32181, 0.0698367, 0.923965, -0.565133, 2.15084, 0.134143, 0.684841, 266.395, 3.13205, -352.945)
 
+[node name="UCharacterBody3D" parent="." instance=ExtResource("6_m1hp7")]
+
 [node name="Interactables" type="Node3D" parent="."]
+script = ExtResource("50_ccqal")
 
 [node name="Truck" parent="Interactables" instance=ExtResource("25_7p2gq")]
-transform = Transform3D(0.0387081, 0.0626304, 1.49819, -0.0349566, 1.49832, -0.0617327, -1.49909, -0.0333214, 0.0401243, 75.358, 11.2109, -70.0749)
+transform = Transform3D(0.0387082, 0.0626304, 1.49819, -0.0349566, 1.49832, -0.0617326, -1.49909, -0.0333215, 0.0401245, 75.358, 11.2109, -70.0749)
 
-[node name="BreakableRock" parent="Interactables" instance=ExtResource("40_uc2pv")]
+[node name="BreakableRock" parent="Interactables" node_paths=PackedStringArray("signaltarget") instance=ExtResource("40_uc2pv")]
 transform = Transform3D(0.0909862, -0.065195, -0.478097, 0.0276888, 0.972362, -0.0245972, 0.357611, -0.0586999, 0.123546, 32.2856, 12.6181, -97.127)
+IsStoryRock = true
+signaltarget = NodePath("..")
 
-[node name="BreakableRock3" parent="Interactables" node_paths=PackedStringArray("decal1", "decal2", "decal3") instance=ExtResource("40_uc2pv")]
+[node name="BreakableRock3" parent="Interactables" instance=ExtResource("40_uc2pv")]
 transform = Transform3D(0.484408, -0.109314, -0.768341, 0.147414, 1.63039, -0.0395297, 1.90391, -0.0984237, 0.198548, 172.268, 12.6181, -82.8477)
-decal1 = NodePath("../BreakableRock/Decal")
-decal2 = NodePath("../BreakableRock/Decal2")
-decal3 = NodePath("../BreakableRock/Decal3")
 
-[node name="BreakableRock2" parent="Interactables" node_paths=PackedStringArray("decal1", "decal2", "decal3") instance=ExtResource("40_uc2pv")]
+[node name="BreakableRock2" parent="Interactables" instance=ExtResource("40_uc2pv")]
 transform = Transform3D(-0.11754, -0.0554379, -0.898133, -0.690829, 0.295596, 0.0950147, 0.318366, 0.620952, -0.125415, 14.7342, 14.8204, -78.4602)
-decal1 = NodePath("../BreakableRock/Decal")
-decal2 = NodePath("../BreakableRock/Decal2")
-decal3 = NodePath("../BreakableRock/Decal3")
 
-[node name="Fish" parent="Interactables" instance=ExtResource("49_m84nr")]
-transform = Transform3D(-0.00128717, -0.0199585, 0, 0.0199585, -0.00128717, 0, 0, 0, 0.02, 219.838, 15.6738, -172.797)
+[node name="PickupFish" parent="Interactables" instance=ExtResource("50_hptkr")]
+transform = Transform3D(-0.0643586, -0.997927, 0, 0.997927, -0.0643586, 0, 0, 0, 1, 219.838, 15.6738, -172.797)
+collision_layer = 1
+collision_mask = 1
+monitoring = false
 
-[node name="Fish6" parent="Interactables" instance=ExtResource("49_m84nr")]
-transform = Transform3D(-3.1676e-06, -4.91162e-05, -0.0199999, 0.0199585, -0.00128717, 0, -0.00128716, -0.0199585, 4.92182e-05, 193.299, 13.8231, -145.775)
+[node name="PickupFish2" parent="Interactables" instance=ExtResource("50_hptkr")]
+transform = Transform3D(-9.42364e-05, -0.00146121, -0.594998, 0.593767, -0.0382932, -1.95895e-10, -0.0382931, -0.593765, 0.00146424, 193.299, 13.8231, -145.775)
+collision_layer = 1
+collision_mask = 1
+monitoring = false
 
-[node name="Fish7" parent="Interactables" instance=ExtResource("49_m84nr")]
-transform = Transform3D(0.00128661, 0.01995, 0.000585998, 0.0199585, -0.00128717, 0, 3.7714e-05, 0.000584783, -0.0199914, 182.175, 12.9109, -121.957)
+[node name="PickupFish3" parent="Interactables" instance=ExtResource("50_hptkr")]
+transform = Transform3D(0.0643306, 0.997498, 0.0292997, 0.997927, -0.0643582, 1.66689e-08, 0.0018857, 0.029239, -0.999571, 182.175, 12.9109, -121.957)
+collision_layer = 1
+collision_mask = 1
+monitoring = false
 
-[node name="Fish3" parent="Interactables" instance=ExtResource("49_m84nr")]
-transform = Transform3D(-0.00128717, -0.0199585, 0, -0.000229205, 1.47819e-05, -0.0199987, 0.0199572, -0.00128708, -0.000229681, 217.84, 14.2678, -143.181)
+[node name="PickupFish4" parent="Interactables" instance=ExtResource("50_hptkr")]
+transform = Transform3D(-0.0643585, -0.997927, -1.73376e-09, -0.0114584, 0.000738977, -0.999934, 0.997861, -0.0643542, -0.0114822, 217.84, 14.2678, -143.181)
+collision_layer = 1
+collision_mask = 1
+monitoring = false
 
-[node name="Fish4" parent="Interactables" instance=ExtResource("49_m84nr")]
-transform = Transform3D(-0.00023915, -0.000139531, -0.0199981, 0.00128535, 0.0199581, -0.000154623, 0.0199572, -0.00128708, -0.000229681, 202.378, 15.9304, -166.69)
+[node name="PickupFish5" parent="Interactables" instance=ExtResource("50_hptkr")]
+transform = Transform3D(-0.00597876, -0.00348827, -0.499952, 0.0321338, 0.498951, -0.00386556, 0.498931, -0.0321769, -0.00574204, 202.378, 15.9304, -166.69)
+collision_layer = 1
+collision_mask = 1
+monitoring = false
 
-[node name="Fish5" parent="Interactables" instance=ExtResource("49_m84nr")]
-transform = Transform3D(0.000453662, 0.00837808, -0.0202726, 0.00145282, 0.0217346, 0.00781161, 0.0345104, -0.00102512, -6.23555e-05, 246.119, 21.1765, -174.793)
+[node name="PickupFish6" parent="Interactables" instance=ExtResource("50_hptkr")]
+transform = Transform3D(0.00978397, 0.267699, -0.695174, 0.0313326, 0.694471, 0.267869, 0.744277, -0.0327549, -0.00213828, 246.119, 21.1765, -174.753)
+collision_layer = 1
+collision_mask = 1
+monitoring = false
 
-[node name="Fish2" parent="Interactables" instance=ExtResource("49_m84nr")]
-transform = Transform3D(0.0272905, -0.00329346, -0.0290583, 0.0014655, 0.0398496, -0.00314021, 0.0292076, 0.00107782, 0.0273085, 243.446, 16.3577, -137.039)
+[node name="PickupFish7" parent="Interactables" instance=ExtResource("50_hptkr")]
+transform = Transform3D(0.907408, -0.109508, -0.966188, 0.0487278, 1.325, -0.104412, 0.971152, 0.0358376, 0.908009, 243.446, 16.3577, -137.039)
+collision_layer = 1
+collision_mask = 1
+monitoring = false
+
+[node name="PickupPickAxe" parent="Interactables" instance=ExtResource("51_h83hr")]
+transform = Transform3D(0.468639, 0, -0.88339, 0, 1, 0, 0.88339, 0, 0.468639, 13.755, 1.65838, -3.40548)
+collision_layer = 1
+collision_mask = 1
+monitoring = false
 
 [node name="Gate" parent="Interactables" instance=ExtResource("23_ydjlm")]
 transform = Transform3D(0.402516, 0, 0, 0, 0.371025, 0, 0, 0, 0.5, 247.26, 17.6094, -212.597)
 
-[node name="Player" parent="." instance=ExtResource("6_m1hp7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196.663, 17.9603, -125.769)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Interactables"]
+libraries = {
+"": SubResource("AnimationLibrary_nt6ux")
+}
 
-[node name="Simple Pickaxe" parent="." instance=ExtResource("52_mqr6s")]
-transform = Transform3D(1, 0, 0, 0, 0.105743, 0.994393, 0, -0.994393, 0.105743, 13.7108, 1.22948, -3.64683)
+[node name="Walls" parent="." instance=ExtResource("53_sqjyu")]

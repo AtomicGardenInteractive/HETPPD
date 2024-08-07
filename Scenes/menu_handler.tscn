@@ -1,11 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnb7c0u218w7y"]
+[gd_scene load_steps=16 format=3 uid="uid://cnb7c0u218w7y"]
 
 [ext_resource type="Script" path="res://Scenes/game_handler.gd" id="1_lt1um"]
-[ext_resource type="PackedScene" uid="uid://bs7u4vh0a6sqg" path="res://Scenes/Player/player.tscn" id="2_ia1on"]
-[ext_resource type="PackedScene" uid="uid://cdh6u6wmw0les" path="res://Scenes/Levels/start_menu_level.tscn" id="4_hmv8y"]
 [ext_resource type="PackedScene" uid="uid://cblg82p1yos3t" path="res://Scenes/Interface/dialog_ui.tscn" id="4_iwrb8"]
+[ext_resource type="Script" path="res://Scenes/Level_Handler.gd" id="5_cqyrk"]
 [ext_resource type="PackedScene" uid="uid://bcgu41slvgc0r" path="res://Scenes/Interface/pause_menu_ui.tscn" id="5_hsnhy"]
+[ext_resource type="Script" path="res://Scenes/Levels/start_menu_level.gd" id="6_le7jk"]
 [ext_resource type="PackedScene" uid="uid://dt3li5wje0wph" path="res://Scenes/Interface/options_menu_ui.tscn" id="7_0kkeh"]
+[ext_resource type="PackedScene" uid="uid://bajvc3jhyurci" path="res://Assets/Character/soldier.tscn" id="7_cmjsc"]
+[ext_resource type="PackedScene" uid="uid://b6ewp5nodagns" path="res://Assets/Plane/plane.tscn" id="7_haplw"]
+[ext_resource type="Material" uid="uid://dkdhmjnlcaah6" path="res://Assets/Shaders/Sky.tres" id="8_qdmbh"]
+[ext_resource type="PackedScene" uid="uid://hwqhkj1yde6e" path="res://Assets/Plane/spinning_light.tscn" id="9_8rf6o"]
+[ext_resource type="PackedScene" uid="uid://dja7a8xd0hgck" path="res://Scenes/Interface/main_menu_ui.tscn" id="9_iija8"]
+[ext_resource type="PackedScene" uid="uid://d1cwyogxoaxfe" path="res://Scenes/Interface/radio.tscn" id="10_yfaju"]
+
+[sub_resource type="Sky" id="Sky_qybjr"]
+sky_material = ExtResource("8_qdmbh")
+
+[sub_resource type="Environment" id="Environment_m6sku"]
+background_mode = 2
+sky = SubResource("Sky_qybjr")
+ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
+fog_enabled = true
+fog_light_color = Color(0.176969, 0.286984, 0.344069, 1)
+fog_light_energy = 0.25
+fog_sky_affect = 0.55
+volumetric_fog_enabled = true
+volumetric_fog_length = 3.17
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_yoehh"]
+exposure_multiplier = 2.0
+dof_blur_far_transition = 1000.0
 
 [node name="Game_Handler" type="Node" node_paths=PackedStringArray("pause_menu", "options_menu", "HUD")]
 process_mode = 3
@@ -32,8 +56,55 @@ options_menu = NodePath("../../OptionsMenuLayer")
 game_handler = NodePath("../../..")
 
 [node name="Level_Handler" type="Node" parent="."]
+unique_name_in_owner = true
 process_mode = 1
+script = ExtResource("5_cqyrk")
 
-[node name="Player" parent="Level_Handler" instance=ExtResource("2_ia1on")]
+[node name="MainMenuLevel" type="Node3D" parent="Level_Handler"]
+script = ExtResource("6_le7jk")
 
-[node name="StartMenuLevel" parent="Level_Handler" instance=ExtResource("4_hmv8y")]
+[node name="Camera3D" type="Camera3D" parent="Level_Handler/MainMenuLevel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.10253, 7.05951)
+
+[node name="Soldier" parent="Level_Handler/MainMenuLevel" instance=ExtResource("7_cmjsc")]
+transform = Transform3D(0.194525, 0, 0.980897, 0, 1, 0, -0.980897, 0, 0.194525, -1.07924, 0.804401, 4.18702)
+
+[node name="Plane" parent="Level_Handler/MainMenuLevel" instance=ExtResource("7_haplw")]
+
+[node name="Spinning light" parent="Level_Handler/MainMenuLevel/Plane" instance=ExtResource("9_8rf6o")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5349, 3.1179, 2.02056)
+
+[node name="Spinning light2" parent="Level_Handler/MainMenuLevel/Plane" instance=ExtResource("9_8rf6o")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.40784, 3.1179, 2.02056)
+
+[node name="MenuUILayer" type="CanvasLayer" parent="Level_Handler/MainMenuLevel"]
+
+[node name="Main_Menu_UI" parent="Level_Handler/MainMenuLevel/MenuUILayer" instance=ExtResource("9_iija8")]
+metadata/_edit_use_anchors_ = true
+
+[node name="RadioLayer" type="CanvasLayer" parent="Level_Handler/MainMenuLevel"]
+visible = false
+
+[node name="Radio" parent="Level_Handler/MainMenuLevel/RadioLayer" instance=ExtResource("10_yfaju")]
+
+[node name="World" type="Node3D" parent="Level_Handler"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Level_Handler/World"]
+environment = SubResource("Environment_m6sku")
+camera_attributes = SubResource("CameraAttributesPractical_yoehh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Level_Handler/World"]
+transform = Transform3D(0.942792, 0.235658, -0.235815, 0.0400582, -0.782294, -0.62162, -0.330967, 0.576612, -0.74698, 0, 0, 0)
+light_color = Color(0, 0, 0, 1)
+light_energy = 0.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+sky_mode = 2
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Level_Handler/World"]
+transform = Transform3D(0.610239, 0.0346175, 0.791461, -0.525139, 0.765693, 0.371407, -0.593159, -0.642274, 0.485435, 0, 0, 0)
+light_color = Color(0.950128, 0.985498, 0.999013, 1)
+light_energy = 0.25
+shadow_enabled = true

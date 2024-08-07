@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://barxapqvxbvey"]
+
+[ext_resource type="PackedScene" uid="uid://dy2ulhfxaeq8p" path="res://Assets/Interactibles/pickup_object.tscn" id="1_gu1s7"]
+[ext_resource type="PackedScene" uid="uid://cokeb2f8d2aou" path="res://Assets/Interactibles/Fish.glb" id="2_6q5ea"]
+
+[node name="PickupFish" instance=ExtResource("1_gu1s7")]
+
+[node name="Fish" parent="Visuals" index="0" instance=ExtResource("2_6q5ea")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)

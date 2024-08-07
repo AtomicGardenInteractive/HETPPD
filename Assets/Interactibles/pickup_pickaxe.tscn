@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg82ev4q2whgd"]
+
+[ext_resource type="PackedScene" uid="uid://dy2ulhfxaeq8p" path="res://Assets/Interactibles/pickup_object.tscn" id="1_mi71s"]
+[ext_resource type="PackedScene" uid="uid://qj2tt1msrj8d" path="res://Assets/Interactibles/Simple Pickaxe.glb" id="2_6s1x2"]
+
+[node name="PickupPickAxe" instance=ExtResource("1_mi71s")]
+TYPE = 1
+
+[node name="Simple Pickaxe" parent="Visuals" index="0" instance=ExtResource("2_6s1x2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)

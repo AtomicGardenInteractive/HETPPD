@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtsmb21bahyj3"]
+
+[ext_resource type="PackedScene" uid="uid://cige2y37tudt6" path="res://Assets/Pickaxe/MargretPickAxer.glb" id="1_3oue7"]
+[ext_resource type="Material" uid="uid://w263w07wul5c" path="res://Assets/Pickaxe/MARGRET.tres" id="2_7mk2s"]
+
+[node name="MargretPickAxer" instance=ExtResource("1_3oue7")]
+
+[node name="group1377344500" parent="." index="0"]
+cast_shadow = 0
+
+[node name="group893600418" parent="." index="1"]
+cast_shadow = 0
+
+[node name="Plane" parent="." index="2"]
+material_override = ExtResource("2_7mk2s")
+cast_shadow = 0

@@ -1,20 +1,19 @@
-extends Control
+extends Node3D
+class_name interactionhandler
 
- 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-func main_menu_anim():
+func movetruck():
+	$AnimationPlayer.play("TruckMove")
 	pass
 
-
-func _on_button_pressed():
-	%Level_Handler.levelswitch()
+func movegate():
+	$AnimationPlayer.play("TruckMove")
 	pass

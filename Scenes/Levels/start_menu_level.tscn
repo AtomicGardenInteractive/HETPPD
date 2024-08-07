@@ -8,12 +8,12 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qbkep"]
 
-[sub_resource type="Sky" id="Sky_mb4cq"]
+[sub_resource type="Sky" id="Sky_4qsa0"]
 sky_material = ExtResource("3_w1mb3")
 
 [sub_resource type="Environment" id="Environment_hc3kw"]
 background_mode = 2
-sky = SubResource("Sky_mb4cq")
+sky = SubResource("Sky_4qsa0")
 ambient_light_color = Color(0.611765, 0.435294, 0.156863, 1)
 volumetric_fog_enabled = true
 volumetric_fog_length = 3.17
@@ -46,6 +46,7 @@ transform = Transform3D(0.420801, -0.709867, 0.564814, -0.305591, 0.475306, 0.82
 
 [node name="Main_Menu_UI" parent="MenuUILayer" node_paths=PackedStringArray("mainmenuscene") instance=ExtResource("2_n7pll")]
 mainmenuscene = NodePath("../..")
+metadata/_edit_use_anchors_ = true
 
 [node name="RadioLayer" type="CanvasLayer" parent="."]
 visible = false

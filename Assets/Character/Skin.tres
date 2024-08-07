@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bms8jxug7yg34"]
+
+[resource]
+resource_name = "Skin"
+albedo_color = Color(0.731236, 0.613314, 0.473951, 1)
+metallic = 0.4
+roughness = 0.415087

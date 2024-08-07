@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://w263w07wul5c"]
+
+[ext_resource type="Texture2D" uid="uid://ddkbjgpj4e513" path="res://Assets/Pickaxe/Margaret-Thatcher-1980.jpg" id="1_g8tr3"]
+
+[resource]
+albedo_texture = ExtResource("1_g8tr3")
