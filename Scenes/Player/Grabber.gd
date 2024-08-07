@@ -1,4 +1,5 @@
 extends Area3D
+class_name grabber
 
 var fishNum: int = 0
 @onready var equipmenthandler: Node3D = $"../Equipment"
@@ -10,7 +11,8 @@ func on_area_enter(target: Area3D):
 	if target is Pickup:
 		match target.TYPE:
 			Pickup.PICKUP_TYPES.Fish:
-				fishNum = +1
+				fishNum += 1
+				print(fishNum)
 				target.On_Collected()
 
 			Pickup.PICKUP_TYPES.Pickaxe:

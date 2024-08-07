@@ -1,19 +1,18 @@
 extends Node3D
 class_name interactionhandler
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func movetruck():
 	$AnimationPlayer.play("TruckMove")
 	pass
 
 func movegate():
-	$AnimationPlayer.play("TruckMove")
+	$AnimationPlayer.play("GateMove")
+	pass
+
+func _on_area_3d_area_entered(area: Area3D):
+	print(area.name)
+	if area is grabber:
+		print(area.fishNum)
+		if area.fishNum>=5:
+			movegate()
 	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://3ikss5hb1chi"]
+[gd_scene load_steps=61 format=3 uid="uid://3ikss5hb1chi"]
 
 [ext_resource type="PackedScene" uid="uid://bxgkepgoxk5vh" path="res://Assets/Enviroment/Ground/Beach/ground_flat.tscn" id="1_gghbu"]
 [ext_resource type="PackedScene" uid="uid://dgftuvi7l5djj" path="res://Assets/Enviroment/Ground/Beach/ground_half_slope.tscn" id="2_dtm7l"]
@@ -166,6 +166,16 @@ _data = {
 "RESET": SubResource("Animation_wrmns"),
 "TruckMove": SubResource("Animation_5mdsh")
 }
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6fl5"]
+emission_enabled = true
+emission = Color(0.808026, 0.816202, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0yasm"]
+material = SubResource("StandardMaterial3D_n6fl5")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7qmkg"]
+size = Vector3(4.44971, 4.34033, 6.57672)
 
 [node name="main_level" type="Node3D"]
 
@@ -3363,6 +3373,7 @@ transform = Transform3D(2.34347, 0.136272, 0.299203, -0.287825, 0.976097, -0.168
 transform = Transform3D(1.08451, -0.325536, -1.32181, 0.0698367, 0.923965, -0.565133, 2.15084, 0.134143, 0.684841, 266.395, 3.13205, -352.945)
 
 [node name="UCharacterBody3D" parent="." instance=ExtResource("6_m1hp7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196.978, 18.2329, -125.788)
 
 [node name="Interactables" type="Node3D" parent="."]
 script = ExtResource("50_ccqal")
@@ -3437,4 +3448,20 @@ libraries = {
 "": SubResource("AnimationLibrary_nt6ux")
 }
 
+[node name="OldLadyWindow" type="Node3D" parent="Interactables"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interactables/OldLadyWindow"]
+transform = Transform3D(-0.00264454, 0.99885, 0, -0.698256, -0.003783, 0, 0, 0, 0.474946, 181.958, 15.9607, -122.896)
+mesh = SubResource("PlaneMesh_0yasm")
+
+[node name="Area3D" type="Area3D" parent="Interactables/OldLadyWindow"]
+transform = Transform3D(1, -2.32831e-10, 0, 0, 1, 0, 0, 0, 1, 181.958, 15.9607, -122.896)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/OldLadyWindow/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72485, -1.67017, -0.204254)
+shape = SubResource("BoxShape3D_7qmkg")
+
 [node name="Walls" parent="." instance=ExtResource("53_sqjyu")]
+
+[connection signal="area_entered" from="Interactables/OldLadyWindow/Area3D" to="Interactables" method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="Interactables/OldLadyWindow/Area3D" to="Interactables" method="_on_area_3d_body_entered"]
