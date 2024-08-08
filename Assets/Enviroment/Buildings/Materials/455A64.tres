@@ -1,7 +1,13 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://62wb77xfwj22"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://62wb77xfwj22"]
+
+[ext_resource type="Texture2D" uid="uid://5ypsul3ss18t" path="res://Assets/Enviroment/Ground/Farm/Woodnoplankscrunchy.jpg" id="1_62n3x"]
 
 [resource]
 resource_name = "455A64"
-albedo_color = Color(0.2717, 0.34919, 0.395881, 1)
-roughness = 0.903922
+albedo_color = Color(0.294535, 0.376366, 0.4257, 1)
+albedo_texture = ExtResource("1_62n3x")
+metallic_specular = 0.0
 emission_enabled = true
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

@@ -10,6 +10,7 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("action_hit") and haspickaxe == true:
+		$AnimationPlayer.play("Pick")
 		var objecthit = raythecast.get_collider()
 		if objecthit==null:
 			return

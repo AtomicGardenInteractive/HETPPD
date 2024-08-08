@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://cnb7c0u218w7y"]
+[gd_scene load_steps=15 format=3 uid="uid://cnb7c0u218w7y"]
 
 [ext_resource type="Script" path="res://Scenes/game_handler.gd" id="1_lt1um"]
-[ext_resource type="PackedScene" uid="uid://cblg82p1yos3t" path="res://Scenes/Interface/dialog_ui.tscn" id="4_iwrb8"]
 [ext_resource type="Script" path="res://Scenes/Level_Handler.gd" id="5_cqyrk"]
 [ext_resource type="PackedScene" uid="uid://bcgu41slvgc0r" path="res://Scenes/Interface/pause_menu_ui.tscn" id="5_hsnhy"]
 [ext_resource type="Script" path="res://Scenes/Levels/start_menu_level.gd" id="6_le7jk"]
@@ -31,18 +30,13 @@ volumetric_fog_length = 3.17
 exposure_multiplier = 2.0
 dof_blur_far_transition = 1000.0
 
-[node name="Game_Handler" type="Node" node_paths=PackedStringArray("pause_menu", "options_menu", "HUD")]
+[node name="Game_Handler" type="Node" node_paths=PackedStringArray("pause_menu", "options_menu")]
 process_mode = 3
 script = ExtResource("1_lt1um")
 pause_menu = NodePath("Interface/PauseMenuLayer/PauseMenuUI")
 options_menu = NodePath("Interface/OptionsMenuLayer/OptionsMenuUI")
-HUD = NodePath("Interface/UILayer/DialogUI")
 
 [node name="Interface" type="Node" parent="."]
-
-[node name="UILayer" type="CanvasLayer" parent="Interface"]
-
-[node name="DialogUI" parent="Interface/UILayer" instance=ExtResource("4_iwrb8")]
 
 [node name="PauseMenuLayer" type="CanvasLayer" parent="Interface"]
 
@@ -76,6 +70,18 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5349
 
 [node name="Spinning light2" parent="Level_Handler/MainMenuLevel/Plane" instance=ExtResource("9_8rf6o")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.40784, 3.1179, 2.02056)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Level_Handler/MainMenuLevel/Plane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52876, 3.34617, -4.70965)
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Level_Handler/MainMenuLevel/Plane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.53269, 3.34617, -4.99379)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Level_Handler/MainMenuLevel/Plane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.34617, 2.66661)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Level_Handler/MainMenuLevel/Plane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.34617, -4.71304)
 
 [node name="MenuUILayer" type="CanvasLayer" parent="Level_Handler/MainMenuLevel"]
 

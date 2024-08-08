@@ -1,7 +1,8 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://ce0jsln7vh02x"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ce0jsln7vh02x"]
+
+[ext_resource type="Texture2D" uid="uid://cecoy7p3xmho7" path="res://Assets/Enviroment/Buildings/RoofingTile.jpg" id="1_m6bb7"]
 
 [resource]
 resource_name = "FFFFFF"
-albedo_color = Color(1, 1, 1, 1)
-roughness = 0.903922
+roughness_texture = ExtResource("1_m6bb7")
 emission_enabled = true

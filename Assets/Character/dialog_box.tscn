@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://6ili0fw2111e"]
+
+[ext_resource type="Script" path="res://DialogBox.gd" id="1_d08sm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2wpd8"]
+size = Vector3(5.81201, 2.65283, 1.29541)
+
+[node name="DialogBox" type="Node3D"]
+script = ExtResource("1_d08sm")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.377686, 0.826416, -0.147705)
+shape = SubResource("BoxShape3D_2wpd8")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

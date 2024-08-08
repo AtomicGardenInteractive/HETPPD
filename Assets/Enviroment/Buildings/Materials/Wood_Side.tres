@@ -1,8 +1,14 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://dyxmtx5phthag"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dyxmtx5phthag"]
+
+[ext_resource type="Texture2D" uid="uid://5ypsul3ss18t" path="res://Assets/Enviroment/Ground/Farm/Woodnoplankscrunchy.jpg" id="1_gi43n"]
 
 [resource]
 resource_name = "Wood_Side"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.590435, 0.513859, 0.348501, 1)
+albedo_texture = ExtResource("1_gi43n")
 metallic = 0.4
 roughness = 0.415087
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

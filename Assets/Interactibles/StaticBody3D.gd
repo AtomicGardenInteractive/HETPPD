@@ -15,7 +15,7 @@ func _process(delta):
 func rockhit():
 	rockshp +=1
 	print(rockshp)
-	if rockshp >=4:
+	if rockshp >=2:
 		if isStoryRock:
 			print("is story rock")
 			get_parent().get_parent().signaltarget.movetruck()

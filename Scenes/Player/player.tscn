@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bs7u4vh0a6sqg"]
+[gd_scene load_steps=11 format=3 uid="uid://bs7u4vh0a6sqg"]
 
 [ext_resource type="Script" path="res://addons/addons/ultimate_character/ucharacterbody3d.gd" id="1_fmlr3"]
 [ext_resource type="Script" path="res://Scenes/Player/Equipment.gd" id="2_61ju3"]
@@ -9,6 +9,67 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5io2p"]
 height = 1.3
+
+[sub_resource type="Animation" id="Animation_85a1n"]
+resource_name = "Pick"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MargretPickAxer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.240431, -0.0916667, -0.565401), Vector3(0.240431, 0.251014, -1.30179), Vector3(0.240431, -0.0916667, -0.565401)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MargretPickAxer:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.28575, 0), Vector3(0.16244, -1.35113, -0.627301), Vector3(-0.16304, -1.33593, 0.596056), Vector3(0, -1.28575, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d6r78"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MargretPickAxer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.240431, -0.0916667, -0.565401)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MargretPickAxer:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.28575, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sbmiu"]
+_data = {
+"Pick": SubResource("Animation_85a1n"),
+"RESET": SubResource("Animation_d6r78")
+}
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_34ufs"]
 height = 1.67753
@@ -35,11 +96,15 @@ script = ExtResource("2_61ju3")
 
 [node name="MargretPickAxer" parent="Head/Camera/Equipment" instance=ExtResource("3_4wjrw")]
 transform = Transform3D(0.281203, 0, -0.959648, 0, 1, 0, 0.959648, 0, 0.281203, 0.240431, -0.0916667, -0.565401)
-visible = false
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera/Equipment"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.0637436, 0)
-target_position = Vector3(0, -2, 0)
+target_position = Vector3(0, -3, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera/Equipment"]
+libraries = {
+"": SubResource("AnimationLibrary_sbmiu")
+}
 
 [node name="Grabber" type="Area3D" parent="Head/Camera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.39063, 0.0343809)

@@ -1,7 +1,12 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjenpcchhy4kk"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cjenpcchhy4kk"]
+
+[ext_resource type="Texture2D" uid="uid://cecoy7p3xmho7" path="res://Assets/Enviroment/Buildings/RoofingTile.jpg" id="1_6iq0f"]
 
 [resource]
 resource_name = "Bag"
 albedo_color = Color(0.517538, 0.462605, 0.354327, 1)
+albedo_texture = ExtResource("1_6iq0f")
 metallic_specular = 0.0
 roughness = 0.415087
+uv1_triplanar = true
+uv1_world_triplanar = true

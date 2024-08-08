@@ -1,8 +1,13 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cw7j8rhixme25"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cw7j8rhixme25"]
+
+[ext_resource type="Texture2D" uid="uid://cl5uhx677iq6m" path="res://Assets/Enviroment/Buildings/PlasterCrunchy.jpg" id="1_xlbi6"]
 
 [resource]
 resource_name = "Plaster"
-vertex_color_use_as_albedo = true
 albedo_color = Color(0.620809, 0.604635, 0.465628, 1)
-metallic = 0.4
-roughness = 0.415087
+albedo_texture = ExtResource("1_xlbi6")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.085, 0.085, 0.085)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

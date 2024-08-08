@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://3ikss5hb1chi"]
+[gd_scene load_steps=66 format=3 uid="uid://3ikss5hb1chi"]
 
 [ext_resource type="PackedScene" uid="uid://bxgkepgoxk5vh" path="res://Assets/Enviroment/Ground/Beach/ground_flat.tscn" id="1_gghbu"]
 [ext_resource type="PackedScene" uid="uid://dgftuvi7l5djj" path="res://Assets/Enviroment/Ground/Beach/ground_half_slope.tscn" id="2_dtm7l"]
@@ -52,34 +52,37 @@
 [ext_resource type="PackedScene" uid="uid://barxapqvxbvey" path="res://Assets/Interactibles/pickup_Fish.tscn" id="50_hptkr"]
 [ext_resource type="PackedScene" uid="uid://yf0yv0vrcy37" path="res://Assets/Enviroment/Scatter/Sheeps.tscn" id="51_8osdg"]
 [ext_resource type="PackedScene" uid="uid://cg82ev4q2whgd" path="res://Assets/Interactibles/pickup_pickaxe.tscn" id="51_h83hr"]
+[ext_resource type="PackedScene" uid="uid://6ili0fw2111e" path="res://Assets/Character/dialog_box.tscn" id="53_5n2fo"]
 [ext_resource type="PackedScene" uid="uid://bmvgnsh482wms" path="res://Scenes/Objects/walls.tscn" id="53_sqjyu"]
+[ext_resource type="PackedScene" uid="uid://c53ihb03wtych" path="res://Assets/Interactibles/TrappedSheep.tscn" id="54_siu2c"]
+[ext_resource type="PackedScene" uid="uid://cblg82p1yos3t" path="res://Scenes/Interface/dialog_ui.tscn" id="55_fcn7k"]
+[ext_resource type="Texture2D" uid="uid://cj8y0b6pdsudn" path="res://Assets/Character/Shari-Lewis-Lamb-Chop.jpg" id="57_l5xqb"]
 
-[sub_resource type="Animation" id="Animation_5mdsh"]
-resource_name = "TruckMove"
-length = 0.2
+[sub_resource type="Animation" id="Animation_s02tt"]
+resource_name = "GateMove"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Truck:position")
+tracks/0/path = NodePath("Gate:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(75.358, 11.2109, -70.0749), Vector3(77.0553, 11.2109, -75.1054)]
+"values": [Vector3(247.26, 17.6094, -212.597), Vector3(246.041, 17.6094, -214.554)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Truck:rotation")
+tracks/1/path = NodePath("Gate:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0.0411668, 1.54402, -0.0233263), Vector3(0.0411668, 2.00433, -0.0233263)]
+"values": [Vector3(0, 0, 0), Vector3(0, 1.10624, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_wrmns"]
@@ -132,32 +135,81 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SheepWalking:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(31.9559, 12.5238, -100.263)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../SheepWalking:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.00202437, 0)]
+}
 
-[sub_resource type="Animation" id="Animation_s02tt"]
-resource_name = "GateMove"
+[sub_resource type="Animation" id="Animation_5mdsh"]
+resource_name = "TruckMove"
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Gate:position")
+tracks/0/path = NodePath("Truck:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(247.26, 17.6094, -212.597), Vector3(246.041, 17.6094, -214.554)]
+"values": [Vector3(75.358, 11.2109, -70.0749), Vector3(77.0553, 11.2109, -75.1054)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Gate:rotation")
+tracks/1/path = NodePath("Truck:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 1.10624, 0)]
+"values": [Vector3(0.0411668, 1.54402, -0.0233263), Vector3(0.0411668, 2.00433, -0.0233263)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../SheepWalking:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(31.9559, 12.5238, -100.263), Vector3(31.9559, 13.175, -77.858), Vector3(43.196, 12.9838, -70.6671), Vector3(47.5603, 12.4655, -78.6846)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../SheepWalking:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.00202437, 0), Vector3(0, 0.973999, 0), Vector3(0, 2.54827, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nt6ux"]
@@ -176,6 +228,9 @@ material = SubResource("StandardMaterial3D_n6fl5")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7qmkg"]
 size = Vector3(4.44971, 4.34033, 6.57672)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pjnv2"]
+size = Vector3(50, 20, 5)
 
 [node name="main_level" type="Node3D"]
 
@@ -393,7 +448,7 @@ transform = Transform3D(1.24715, 0, 1.64791, 0, 1.00046, 0, -0.932139, 0, 2.2048
 metadata/_edit_lock_ = true
 
 [node name="Rock2" parent="Beach/Rocks" instance=ExtResource("9_w4v3o")]
-transform = Transform3D(-0.0713756, 0, 0.99745, 0, 1, 0, -0.99745, 0, -0.0713756, 10.6464, 10.372, -54.8681)
+transform = Transform3D(-0.0713756, 0, 0.99745, 0.0637597, 0.997955, 0.00456252, -0.99541, 0.0639227, -0.0712296, 10.6464, 10.2615, -54.8681)
 metadata/_edit_lock_ = true
 
 [node name="Rock3" parent="Beach/Rocks" instance=ExtResource("10_r0pay")]
@@ -3373,13 +3428,14 @@ transform = Transform3D(2.34347, 0.136272, 0.299203, -0.287825, 0.976097, -0.168
 transform = Transform3D(1.08451, -0.325536, -1.32181, 0.0698367, 0.923965, -0.565133, 2.15084, 0.134143, 0.684841, 266.395, 3.13205, -352.945)
 
 [node name="UCharacterBody3D" parent="." instance=ExtResource("6_m1hp7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196.978, 18.2329, -125.788)
+transform = Transform3D(-0.999631, 0, 0.027154, 0, 1, 0, -0.027154, 0, -0.999631, 10.1434, 1.90735e-06, 12.0967)
 
 [node name="Interactables" type="Node3D" parent="."]
 script = ExtResource("50_ccqal")
+lines = "Woman in the Window : Thanks for the all the fish! I've opened the gate on the otherside of the vilage for you."
 
 [node name="Truck" parent="Interactables" instance=ExtResource("25_7p2gq")]
-transform = Transform3D(0.0387082, 0.0626304, 1.49819, -0.0349566, 1.49832, -0.0617326, -1.49909, -0.0333215, 0.0401245, 75.358, 11.2109, -70.0749)
+transform = Transform3D(0.0387093, 0.0626305, 1.49819, -0.0349566, 1.49832, -0.0617327, -1.49909, -0.0333214, 0.0401255, 75.358, 11.2109, -70.0749)
 
 [node name="BreakableRock" parent="Interactables" node_paths=PackedStringArray("signaltarget") instance=ExtResource("40_uc2pv")]
 transform = Transform3D(0.0909862, -0.065195, -0.478097, 0.0276888, 0.972362, -0.0245972, 0.357611, -0.0586999, 0.123546, 32.2856, 12.6181, -97.127)
@@ -3461,7 +3517,151 @@ transform = Transform3D(1, -2.32831e-10, 0, 0, 1, 0, 0, 0, 1, 181.958, 15.9607, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72485, -1.67017, -0.204254)
 shape = SubResource("BoxShape3D_7qmkg")
 
+[node name="DialogBox" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(0.994077, 0, -0.108676, 0, 1, 0, 0.108676, 0, 0.994077, 13.2004, 14.4461, -72.6816)
+lines = "Margaret Thatcher : I wonder how we get through this rock...."
+
+[node name="DialogBox2" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(-0.0779546, 0, -0.996957, 0, 1, 0, 0.996957, 0, -0.0779546, 71.9573, 12.0354, -69.4086)
+lines = "Farmer in the car: Can you free one of my flock? They got trapped when I moved the herd to this field."
+
+[node name="DialogBox3" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.1116, 13.4118, -93.097)
+lines = "Margaret Thatcher: One of the little blighters is trapped back there! "
+
+[node name="DialogBox4" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(0.0814167, 0, -0.99668, 0, 1, 0, 0.99668, 0, 0.0814167, 82.222, 11.5877, -69.3648)
+lines = "Margaret Thatcher: Finnally away from the ghastly smell of sheep."
+
+[node name="DialogBox5" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(0.393958, 0, -0.919128, 0, 1, 0, 0.919128, 0, 0.393958, 168.221, 13.4177, -81.7862)
+lines = "Margaret Thatcher: Not another rock!"
+
+[node name="DialogBox6" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(2.16889, 0, -1.24334, 0, 2.5, 0, 1.24334, 0, 2.16889, 189.012, 13.4177, -115.117)
+lines = "Woman in the Window : Hey, you there! Do me a favour and grab me 5 fish from round the village and I'll open the gate to the beach as a reward!"
+
+[node name="DialogBox7" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(0.705847, 0, -0.708364, 0, 1, 0, 0.708364, 0, 0.705847, 239.12, 16.3428, -135.663)
+lines = "Margaret Thatcher: Horses are the epitomy of free loaders, wretched creatures!"
+
+[node name="DialogBox9" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(0.480346, 0, -0.877079, 0, 1, 0, 0.877079, 0, 0.480346, 244.205, 16.8591, -171.66)
+lines = "Margaret Thatcher: Somthing is fishy about that blacksmiths sign..."
+
+[node name="DialogBox10" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(0.999786, 0, -0.0206805, 0, 1, 0, 0.0206805, 0, 0.999786, 248.672, 17.4299, -215.188)
+lines = "Margaret Thatcher: There's the light house."
+
+[node name="DialogBox11" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(6.92118, 0, -1.04747, 0, 7, 0, 1.04747, 0, 6.92118, 245.171, 3.43409, -270.967)
+lines = "Margaret Thatcher: Towards the phalic structure!"
+
+[node name="DialogBox12" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(0.563007, 0, -0.826452, 0, 1, 0, 0.826452, 0, 0.563007, 277.061, 5.09822, -282.816)
+lines = "Margaret Thatcher: Not that one! The red and white strippey one!"
+
+[node name="DialogBox13" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(5.93621, 0, -3.70964, 0, 7, 0, 3.70964, 0, 5.93621, 277.283, 5.09822, -339.161)
+lines = "Margaret Thatcher: Is it me or is that light house larger than it looked before!?"
+
+[node name="DialogBox8" parent="Interactables" instance=ExtResource("53_5n2fo")]
+transform = Transform3D(0.0226431, 2.20945, -0.0438975, 0.0186931, 0.0437068, 2.20949, 2.2098, -0.0230092, -0.0182407, 217.577, 16.2752, -172.274)
+lines = "Margaret Thatcher: Well, well, well what do we have here?"
+
+[node name="GameEnder" type="Node3D" parent="Interactables"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 291.309, 0, -365.473)
+
+[node name="GameEnder" type="Area3D" parent="Interactables/GameEnder"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/GameEnder/GameEnder"]
+transform = Transform3D(0.877339, 0, -0.479871, 0, 1, 0, 0.479871, 0, 0.877339, -2.65771, 16.2735, 8.14514)
+shape = SubResource("BoxShape3D_pjnv2")
+
 [node name="Walls" parent="." instance=ExtResource("53_sqjyu")]
+
+[node name="SheepWalking" parent="." instance=ExtResource("54_siu2c")]
+transform = Transform3D(0.299999, 0, -0.000607312, 0, 0.3, 0, 0.000607312, 0, 0.299999, 31.9559, 12.5238, -100.263)
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="DialogUI" parent="UILayer" instance=ExtResource("55_fcn7k")]
+visible = false
+
+[node name="GameEnd" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="GameOver" type="Control" parent="GameEnd"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="GameEnd/GameOver"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 226.0
+offset_top = 74.0
+offset_right = -226.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameEnd/GameOver/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameEnd/GameOver/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("57_l5xqb")
+
+[node name="Panel" type="Panel" parent="GameEnd/GameOver/Panel2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameEnd/GameOver/Panel2/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "This is general Muttonchop, do you read me solider?... Well done, you made it in one peice I see. Hope the natives didnt give you any trouble! The invasion will begin as soon as I've had a cuppa! See you soon, Kisses! XoXo"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="GameEnd/GameOver/Panel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -43.0
+offset_right = 22.5
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Exit Game"
 
 [connection signal="area_entered" from="Interactables/OldLadyWindow/Area3D" to="Interactables" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Interactables/OldLadyWindow/Area3D" to="Interactables" method="_on_area_3d_body_entered"]
+[connection signal="area_entered" from="Interactables/GameEnder/GameEnder" to="Interactables" method="_on_game_ender_area_entered"]
+[connection signal="pressed" from="GameEnd/GameOver/Panel2/Button" to="Interactables" method="_on_button_pressed"]

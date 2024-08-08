@@ -5,3 +5,4 @@ resource_name = "Skin"
 albedo_color = Color(0.731236, 0.613314, 0.473951, 1)
 metallic = 0.4
 roughness = 0.415087
+uv1_world_triplanar = true

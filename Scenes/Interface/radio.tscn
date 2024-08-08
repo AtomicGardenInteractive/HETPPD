@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1cwyogxoaxfe"]
+[gd_scene load_steps=3 format=3 uid="uid://d1cwyogxoaxfe"]
 
 [ext_resource type="Script" path="res://Scenes/Interface/radio.gd" id="1_lsw4q"]
+[ext_resource type="Texture2D" uid="uid://cj8y0b6pdsudn" path="res://Assets/Character/Shari-Lewis-Lamb-Chop.jpg" id="2_yjjhv"]
 
 [node name="Radio" type="Control"]
 layout_mode = 3
@@ -38,32 +39,25 @@ offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
-custom_minimum_size = Vector2(600, 300)
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer"]
 layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="Panel2" type="Panel" parent="Panel/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
-layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("2_yjjhv")
 
 [node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "This is general Muttonchop, do you read me solider?... Good. Your mission once you hit the beach is to get to the lighthouse on the far side of the Island, and signal the landing party. Do whatever it takes. We are counting on you!"
+autowrap_mode = 3
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 1

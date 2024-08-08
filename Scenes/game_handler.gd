@@ -25,9 +25,6 @@ func _input(event: InputEvent):
 func switch_menu_pause():
 	pause_menu.switch_menu()
 
-#func switch_menu_load():
-	#load_menu.switch_menu()
-
 func switch_menu_options():
 	options_menu.switch_menu()
 

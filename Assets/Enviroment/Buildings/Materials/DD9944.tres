@@ -1,7 +1,13 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://db4l40m2ooaf1"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://db4l40m2ooaf1"]
+
+[ext_resource type="Texture2D" uid="uid://cecoy7p3xmho7" path="res://Assets/Enviroment/Buildings/RoofingTile.jpg" id="1_rtwm0"]
 
 [resource]
 resource_name = "DD9944"
 albedo_color = Color(0.870345, 0.609712, 0.2478, 1)
+albedo_texture = ExtResource("1_rtwm0")
 roughness = 0.903922
 emission_enabled = true
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
