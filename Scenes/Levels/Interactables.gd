@@ -26,7 +26,7 @@ func play_dialog(dialog: String):
 	pass
 
 
-func _on_game_ender_area_entered(area):
+func _on_game_ender_area_entered(_area):
 	GameEnd.visible = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	pass # Replace with function body.

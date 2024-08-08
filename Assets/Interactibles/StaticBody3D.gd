@@ -8,10 +8,6 @@ var rockshp : int = 0
 func _ready():
 	isStoryRock = get_parent().get_parent().IsStoryRock
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func rockhit():
 	rockshp +=1
 	print(rockshp)
